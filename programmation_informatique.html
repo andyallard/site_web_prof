@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang='fr' dir='ltr'>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Programmation informatique 11/12</title>
+
+  <!-- propriétés -->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta
+      name='description'
+      content='cours de JavaScript, leçons et devoirs'
+  >
+  <meta name='author' content='Andy Allard'>
+
+  <!-- le CSS -->
+  <link rel='stylesheet' href='main.css'>
+
+  <!-- pour Google fonts -->
+  <link rel='preconnect' href='https://fonts.googleapis.com'>
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;700;800&family=Karla:wght@200;300;400;700;800&family=Montserrat:wght@300;700&family=Oxygen:wght@300;400;700&family=Source+Code+Pro:wght@300;400;600;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap' rel='stylesheet'>
+
+  <!-- pour les favicons -->
+  <link rel='apple-touch-icon' sizes='76x76' href='icons/apple-touch-icon.png'>
+  <link rel='icon' type='image/png' sizes='32x32' href='icons/favicon-32x32.png'>
+  <link rel='icon' type='image/png' sizes='16x16' href='icons/favicon-16x16.png'>
+  <link rel='manifest' href='icons/site.webmanifest'>
+  <link rel='mask-icon' href='icons/safari-pinned-tab.svg' color='#5bbad5'>
+  <link rel='shortcut icon' href='icons/favicon.ico'>
+  <meta name='msapplication-TileColor' content='#da532c'>
+  <meta name='msapplication-config' content='icons/browserconfig.xml'>
+  <meta name='theme-color' content='#ffffff'>
+
+  <script src='javascript.js' charset='utf-8' async></script>
+
+</head>
+
+<body>
+
+  <button onclick='topFunction()' id='boutonHaut' title='Retourner en haut'>Haut</button>
+
+  <header>
+
+    <nav>
+      <ul>
+        <li><a href='index.html'>Acceuil</a></li>
+        <li><a href='ccpt_carriere.html'>CCPT 9</a></li>
+        <li><a href='developpement_web.html'>Développement web 10</a></li>
+        <li><a href='programmation_informatique.html'>Programmation 11/12</a></li>
+      </ul>
+    </nav>
+
+    <h1 class='centre'>
+     Programmation informatique 11/12
+    </h1>
+    <h2 class='centre'>
+     Introduction au JavaScript
+    </h2>
+    <h4 class='centre'><a href='#remerciements' target='_self'>
+     Remerciements
+    </a></h4>
+
+  </header>
+
+  <main>
+<!--
+	<section>
+		<p>
+			Before you get started:  <br>
+			<a href='https://youtu.be/pLJqK09dCAo' target='_blank'>Get Thonny up and running. </a>  <br>
+			<a href='https://youtu.be/jRh2y7wJodc' target='_blank'>Organize your OneDrive and share it with me.</a>   <br>
+			<a href='https://youtu.be/1P5cvE3EE7Q' target='_blank'>Typical workflow</a>  <br>
+		</p>
+	</section> -->
+
+  <section>
+    <h2>Avant de commencer le cours</h2>
+    <ul>
+      <li>Nous allons utiliser un éditeur de texte, le logiciel Atom, que vous pouvez le télécharger sur SelfService si vous utilisez un ordinateur fourni par le CSF ou <a href='https://atom.io/'>le télécharger ici</a> si vous utilisez votre propre ordinateur.</li>
+
+      <br>
+
+      <li>JavaScript est un langage de programmation pour <span class='graisse-normale'>le web</span> et donc nécessite au minimum un fichier .html pour fonctionner. <a href='https://www.pierre-giraud.com/javascript-apprendre-coder-cours/ou-ecrire-code-javascript/'>Cette page</a> explique où nous écrivons notre code JavaScript. Nous allons utiliser le troisième endroit mentionné, <span class='graisse-normale'>dans un fichier (.js) séparé.</span></li>
+    </ul>
+    <hr>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section>
+    <h2>Liste de devoirs</h2>
+    <ol>
+      <li><a href='#travail1'>Travail 1</a></li>
+  <li><a href='#travail2'>Travail 2</a></li>
+  <li><a href='#travail3'>Travail 3</a></li>
+  <li><a href='#aventure1'>Choisis ta propre aventure 1</a></li>
+  <li><a href='#aventure2'>Choisis ta propre aventure 2</a></li>
+  <li><a href='#dialogueur1'>Dialogueur</a></li>
+  <li><a href='#dialogueur2'>Dialogueur intelligent</a></li>
+  <li><a href='#nourribot'>Nourribot</a></li>
+  <li><a href='#devinettes'>Jeu des devinettes</a></li>
+  <li><a href='#cartesmemoires'>Cartes mémoires (flashcards)</a></li>
+  <li><a href='#grotte'>La Grotte</a></li>
+  <li><a href='#calculbot'>Calculbot</a></li>
+  <li><a href='#factorisation'>Factorisation</a></li>
+  <li><a href='#etoiles'>Étoiles</a></li>
+  <li><a href='#fonction1'>Fonctions</a></li>
+  <li><a href='#gratteux'>Gratteux</a></li>
+  <li><a href='#roulette'>Roulette</a></li>
+  <li><a href='#hasard'>Jeu de hasard</a></li>
+    </ol>
+    <hr>
+  </section>
+
+  <section class='devoir'>
+    <h2 class='centre' id='travail1'>Travail 1</h2>
+    <p class='graisse-normale centre'>Date d'achèvement estimée (durée) : <span class='date-achevement marge'>6 octobre</span> (1 cours)</p>
+    <p><span class='graisse-normale'>Consignes : </span>Voir le <a href='https://drive.google.com/file/d/1h4clmPPOOv5rcD1I-ApwuW8x_yhzf8ec/view?usp=sharing' target='_blank'>pdf</a>.</p>
+    <p>Il faut utiliser le français en tout temps. La communication entre le programme et l'utilisateur, les commentaires dans le code et même les noms des variables et des fonctions doivent être tous en français.</p>
+    <p>Il faut utiliser les concepts JavaScript suivants : </p>
+    <ul>
+      <li>commentaires</li>
+      <li>indentation</li>
+      <li>variables</li>
+      <li>html</li>
+      <li>lier un fichier .html et un fichier .js</li>
+    </ul>
+
+    <p><span class='graisse-normale'>Évaluation : </span> Ce devoir a un poids de 2 et sera évalué selon cette <a href='https://drive.google.com/file/d/1jg9OzgBymxxG9Dke8hkFva-zu55r9g-m/view?usp=sharing' target='_blank'>grille d'évaluation</a>.</p>
+    <p></p>
+    <p><span class='graisse-normale'>Évaluation par ses pairs : </span>pas obligatoire, mais toujours une bonne idée</p><p class='graisse-normale'>Leçons pertinentes</p>
+    <ul>
+      <li><a href='https://www.pierre-giraud.com/javascript-apprendre-coder-cours/commentaire-indentation-syntaxe/' target='_blank'>Commentaires, indentation et syntaxe de base en JavaScript - Pierre Giraud</a></li>
+      <li><a href='https://smnarnold.com/cours/javascript/var' target='_blank'>Var - Définition - SMNArnold</a></li>
+      <li><a href='https://smnarnold.com/cours/javascript/var#initialisation' target='_blank'>Var - Initialisation - SMNArnold</a></li>
+      <li><a href='https://smnarnold.com/cours/javascript/var#modification' target='_blank'>Var - Modification - SMNArnold</a></li>
+      <li><a href='https://www.pierre-giraud.com/html-css-apprendre-coder-cours/structure-minimale-page/' target='_blank'>Structure minimale d’une page HTML valide</a></li>
+      <li><a href='https://smnarnold.com/cours/javascript/const-and-let#let' target='_blank'>let - SMNArnold</a></li>
+      <li><a href='https://smnarnold.com/cours/javascript/nommer-ses-variables' target='_blank'>Nommer ses variables - SMNArnold</a></li>
+
+    </ul>
+
+    <hr>
+
+  </section>
+
+  <section class='devoir'>
+    <h2 class='centre' id='travail2'>Travail 2</h2>
+    <p class='graisse-normale centre'>Date d'achèvement estimée (durée) : <span class='date-achevement marge'>15 octobre</span> (2 cours)</p>
+    <p><span class='graisse-normale'>Consignes : </span>Voir le <a href='https://drive.google.com/file/d/12hlbhOF3TLiZ4TFuyg9MEn-G24TwxybM/view?usp=sharing' target='_blank'>pdf</a>.</p>
+    <p>Il faut utiliser le français en tout temps. La communication entre le programme et l'utilisateur, les commentaires dans le code et même les noms des variables et des fonctions doivent être tous en français.</p>
+    <p>Il faut utiliser les concepts JavaScript suivants : </p>
+    <ul>
+      <li>alert</li>
+      <li>console.log</li>
+      <li>opérateurs arithmétiques (<span class='italique'>+, -, /, *, **, %</span>)</li>
+      <li>opérateurs d'affectation (<span class='italique'>+=, -=, /=, *=, %= </span>)</li>
+    </ul>
+
+    <p><span class='graisse-normale'>Évaluation : </span> Ce devoir a un poids de 2 et sera évalué selon cette <a href='https://drive.google.com/file/d/1jg9OzgBymxxG9Dke8hkFva-zu55r9g-m/view?usp=sharing' target='_blank'>grille d'évaluation</a>.</p>
+    <p></p>
+    <p><span class='graisse-normale'>Évaluation par ses pairs : </span>pas obligatoire, mais toujours une bonne idée</p><p class='graisse-normale'>Leçons pertinentes</p>
+    <ul>
+      <li><a href='https://www.pierre-giraud.com/javascript-apprendre-coder-cours/operateur-arithmetique-affectation/' target='_blank'>Les opérateurs arithmétiques et d'affectation - Pierre Giraud</a></li>
+      <li><a href='https://smnarnold.com/cours/javascript/operateurs-affectation' target='_blank'>Opérateurs d'affectation - SMNArnold</a></li>
+
+    </ul>
+
+    <hr>
+
+  </section>
+
+  <section class='devoir'>
+    <h2 class='centre' id='travail3'>Travail 3</h2>
+    <p class='graisse-normale centre'>Date d'achèvement estimée (durée) : <span class='date-achevement marge'>21 octobre</span> (2 cours)</p>
+    <p><span class='graisse-normale'>Consignes : </span>Voir le <a href='https://drive.google.com/file/d/1r0S9rG7YpGTCn14hWjo0ZThzjM4nkf01/view?usp=sharing' target='_blank'>pdf</a>.</p>
+    <p>Il faut utiliser le français en tout temps. La communication entre le programme et l'utilisateur, les commentaires dans le code et même les noms des variables et des fonctions doivent être tous en français.</p>
+    <p>Il faut utiliser les concepts JavaScript suivants : </p>
+    <ul>
+      <li>chaîne de caractères</li>
+      <li>nombre</li>
+      <li>booléen</li>
+      <li>opérateurs de comparaison (<span class='italique'>==, !=, >, <, >=, <=, ===, !==</span>)</li>
+      <li>typeof</li>
+      <li>concaténation</li>
+    </ul>
+
+    <p><span class='graisse-normale'>Évaluation : </span> Ce devoir a un poids de 2 et sera évalué selon cette <a href='https://drive.google.com/file/d/1jg9OzgBymxxG9Dke8hkFva-zu55r9g-m/view?usp=sharing' target='_blank'>grille d'évaluation</a>.</p>
+    <p></p>
+    <p><span class='graisse-normale'>Évaluation par ses pairs : </span>pas obligatoire, mais toujours une bonne idée</p><p class='graisse-normale'>Leçons pertinentes</p>
+    <ul>
+      <li><a href='https://smnarnold.com/cours/javascript/primitives#string' target='_blank'>Chaine de caractères - SMNArnold</a></li>
+      <li><a href='https://smnarnold.com/cours/javascript/primitives#number' target='_blank'>Nombre - SMNArnold</a></li>
+      <li><a href='https://smnarnold.com/cours/javascript/primitives#boolean' target='_blank'>Booléen - SMNArnold</a></li>
+      <li><a href='https://www.smnarnold.com/cours/javascript/operateurs-de-comparaison' target='_blank'>Les opérateurs de comparaison - SMNArnold</a></li>
+      <li><a href='https://smnarnold.com/cours/javascript/primitives#typeof' target='_blank'>Typeof - SMNArnold</a></li>
+      <li><a href='https://www.pierre-giraud.com/javascript-apprendre-coder-cours/concatenation-litteraux-gabarit/' target='_blank'>La concaténation - Pierre Giraud</a></li>
+
+    </ul>
+
+    <hr>
+
+  </section>
+
+  <section class='devoir'>
+    <h2 class='centre' id='aventure1'>Choisis ta propre aventure 1</h2>
+    <p class='graisse-normale centre'>Date d'achèvement estimée (durée) : <span class='date-achevement marge'>9 novembre</span> (2 cours)</p>
+    <p><span class='graisse-normale'>Consignes : </span>Voir le <a href='https://drive.google.com/file/d/1fRJutNgCvyvDxhFJw1b4VNwP__nriPBe/view?usp=sharing' target='_blank'>pdf</a>.</p>
+    <p>Il faut utiliser le français en tout temps. La communication entre le programme et l'utilisateur, les commentaires dans le code et même les noms des variables et des fonctions doivent être tous en français.</p>
+    <p>Il faut utiliser les concepts JavaScript suivants : </p>
+    <ul>
+      <li>les conditionnels (<span class='italique'>if, else if, else</span>)</li>
+    </ul>
+
+    <p><span class='graisse-normale'>Évaluation : </span> Ce devoir a un poids de 4 et sera évalué selon cette <a href='https://drive.google.com/file/d/1jg9OzgBymxxG9Dke8hkFva-zu55r9g-m/view?usp=sharing' target='_blank'>grille d'évaluation</a>.</p>
+    <p><details class='bleu'>
+              <summary>
+                <span class='graisse-normale'>Solution</span>
+              </summary>
+                l’élément <span class='element'>footer</span> doit être contenu dans l’élément <span class='element'>body</span>
+            </details></p>
+    <p><span class='graisse-normale'>Évaluation par ses pairs : </span>pas obligatoire, mais toujours une bonne idée</p><p class='graisse-normale'>Leçons pertinentes</p>
+    <ul>
+      <li>exercice pour pratiquer : écrire un programme pour déterminer si un nombre est pair ou impair (facultatif)</li>
+      <li>exercice: écrire un programme pour déterminer si un nombre est positif ou négatif (facultatif)</li>
+      <li><a href='https://www.smnarnold.com/cours/javascript/conditions' target='_blank'>Les conditionnels - SMNArnold</a></li>
+
+    </ul>
+
+    <hr>
+
+  </section>
+
+  <section class='devoir'>
+    <h2 class='centre' id='aventure2'>Choisis ta propre aventure 2</h2>
+    <p class='graisse-normale centre'>Date d'achèvement estimée (durée) : <span class='date-achevement marge'>15 novembre</span> (2 cours)</p>
+    <p><span class='graisse-normale'>Consignes : </span>Voir le <a href='https://drive.google.com/file/d/15Y7GWxIaPGorxQrH8q7JAaau5K52Fk5q/view?usp=sharing' target='_blank'>pdf</a>.</p>
+    <p>Il faut utiliser le français en tout temps. La communication entre le programme et l'utilisateur, les commentaires dans le code et même les noms des variables et des fonctions doivent être tous en français.</p>
+    <p>Il faut utiliser les concepts JavaScript suivants : </p>
+    <ul>
+      <li>les boucles <span class='italique'>while</span></li>
+    </ul>
+
+    <p><span class='graisse-normale'>Évaluation : </span> Ce devoir a un poids de 2 et sera évalué selon cette <a href='https://drive.google.com/file/d/1jg9OzgBymxxG9Dke8hkFva-zu55r9g-m/view?usp=sharing' target='_blank'>grille d'évaluation</a>.</p>
+    <p></p>
+    <p><span class='graisse-normale'>Évaluation par ses pairs : </span>pas obligatoire, mais toujours une bonne idée</p><p class='graisse-normale'>Leçons pertinentes</p>
+    <ul>
+      <li>exercice pour pratiquer : écrire un programme que demande à l'utilisateur de déviner un chiffre entre 0 et 10 et continue à demander jusqu'à ce que l'utilisateur choisisse le bon chiffre (facultatif)</li>
+      <li><a href='https://www.pierre-giraud.com/javascript-apprendre-coder-cours/boucle-while-do-for-in/' target='_blank'>La boucle JavaScript <span class='italique'>while</span> - Pierre Giraud</a></li>
+
+    </ul>
+
+    <hr>
+
+  </section>
+
+  <section class='devoir'>
+    <h2 class='centre' id='dialogueur1'>Dialogueur</h2>
+    <p class='graisse-normale centre'>Date d'achèvement estimée (durée) : <span class='date-achevement marge'>13 janvier</span> (2 cours)</p>
+    <p><span class='graisse-normale'>Consignes : </span>Créer un dialogueur (bot conversationnel) qui pose trois (3) questions à l'utilisateur et répond aux questions avec des réponses aléatoires (choisies par hasard d'une liste).</p>
+    <p>Il faut utiliser le français en tout temps. La communication entre le programme et l'utilisateur, les commentaires dans le code et même les noms des variables et des fonctions doivent être tous en français.</p>
+    <p>Il faut utiliser les concepts JavaScript suivants : </p>
+    <ul>
+      <li><span class='italique'>Math.random()</span></li>
+      <li>entrée utilisateur </li>
+      <li>afficher de l'information à l'utilisateur</li>
+      <li>les tableaux</li>
+      <li>les indices de tableau</li>
+    </ul>
+
+    <p><span class='graisse-normale'>Évaluation : </span> Ce devoir a un poids de 2 et sera évalué selon cette <a href='https://drive.google.com/file/d/1jg9OzgBymxxG9Dke8hkFva-zu55r9g-m/view?usp=sharing' target='_blank'>grille d'évaluation</a>.</p>
+    <p></p>
+    <p><span class='graisse-normale'>Évaluation par ses pairs : </span>obligatoire, choisir deux autres élèves.</p><p class='graisse-normale'>Leçons pertinentes</p>
+    <ul>
+      <li><a href='https://youtu.be/PV2H3nxdX-U' target='_blank'>La méthode <span class='italique'>Math.random()</span> - vidéo</a></li>
+      <li><a href='https://smnarnold.com/cours/javascript/objet-math#random' target='_blank'>La méthode <span class='italique'>Math.random()</span> - SMNArnold</a></li>
+      <li><a href='https://smnarnold.com/cours/javascript/objet-math#floor-ceil' target='_blank'>La méthode <span class='italique'>Math.floor()</span> - SMNArnold</a></li>
+      <li><a href='https://youtu.be/PZSvQVUbt9M' target='_blank'>Introduction aux tableaux - vidéo</a></li>
+      <li><a href='https://smnarnold.com/cours/javascript/tableau' target='_blank'>Les tableaux - SMNArnold</a></li>
+      <li><a href='https://youtu.be/1XZu6ZGQL3c' target='_blank'>Comment créer un dialogueur - vidéo</a></li>
+
+    </ul>
+
+    <p class='gros'><a href='https://youtu.be/OkDx4zsUyh4' target='_blank'>Exemple du produit final</a></p>
+
+    <hr>
+
+  </section>
+
+  <section class='devoir'>
+    <h2 class='centre' id='dialogueur2'>Dialogueur intelligent</h2>
+    <p class='graisse-normale centre'>Date d'achèvement estimée (durée) : <span class='date-achevement marge'>17 janvier</span> (1 cours)</p>
+    <p><span class='graisse-normale'>Consignes : </span>Créer un dialogueur qui pose une série de questions à l'utilisateur. Le dialogueur doit comprendre les réponses et répondre de façon appropriée. Voir l'exemple du produit final pour plus de détails.</p>
+    <p>Il faut utiliser le français en tout temps. La communication entre le programme et l'utilisateur, les commentaires dans le code et même les noms des variables et des fonctions doivent être tous en français.</p>
+    <p>Il faut utiliser les concepts JavaScript suivants : </p>
+    <ul>
+      <li>les conditionnels (<span class='italique'>if, else if, else</span>)</li>
+      <li>Concaténation des chaînes de caractères (strings)</li>
+      <li>Les opérateurs de comparaison (<span class='italique'>==, !=, <, >, <=, >=, ===, !==</span>)</li>
+      <li>Les opérateurs logiques (<span class='italique'>&&, ||, !</span>)</li>
+    </ul>
+
+    <p><span class='graisse-normale'>Évaluation : </span> Ce devoir a un poids de 2 et sera évalué selon cette <a href='https://drive.google.com/file/d/1jg9OzgBymxxG9Dke8hkFva-zu55r9g-m/view?usp=sharing' target='_blank'>grille d'évaluation</a>.</p>
+    <p></p>
+    <p><span class='graisse-normale'>Évaluation par ses pairs : </span>obligatoire, choisir deux autres élèves.</p><p class='graisse-normale'>Leçons pertinentes</p>
+    <ul>
+      <li><a href='https://www.smnarnold.com/cours/javascript/conditions' target='_blank'>Les conditionnels - SMNArnold</a></li>
+      <li><a href='https://www.smnarnold.com/cours/javascript/operateurs-de-comparaison' target='_blank'>Les opérateurs de comparaison - SMNArnold</a></li>
+      <li><a href='https://www.smnarnold.com/cours/javascript/operateurs-de-comparaison#et-logique' target='_blank'>Les opérateurs logiques - SMNArnold</a></li>
+      <li><a href='https://youtu.be/l68iapD-7F4' target='_blank'>Comment créer un dialogueur plus complexe - vidéo</a></li>
+
+    </ul>
+
+    <p class='gros'><a href='https://youtu.be/yvJU9Z3Kbjc' target='_blank'>Exemple du produit final</a></p>
+
+    <hr>
+
+  </section>
+
+  <section class='devoir'>
+    <h2 class='centre' id='nourribot'>Nourribot</h2>
+    <p class='graisse-normale centre'>Date d'achèvement estimée (durée) : <span class='date-achevement marge'>24 janvier</span> (2 cours)</p>
+    <p><span class='graisse-normale'>Consignes : </span>Créer un programme (nourribot) qui demande à l'utilisateur sa nourriture préférée et sauvegarde la réponse. Il aura au moins trois (3) listes de nourriture. Le programme suggera un restaurant d'une liste selon la réponse de l'utilisateur. </p><p>Il y aura au moins trois (3) listes de restaurants (ex. une liste de restaurants thaï, une liste de restaurants du style « diner » et une liste de restaurants japonais). Si l'utilisateur tape une nourriture japonaise (ex. sushi, ramen ou katsu), le nourribot va recommander un restaurant aléatoire de la liste de restaurants japonais.</p>
+    <p>Il faut utiliser le français en tout temps. La communication entre le programme et l'utilisateur, les commentaires dans le code et même les noms des variables et des fonctions doivent être tous en français.</p>
+    <p>Il faut utiliser les concepts JavaScript suivants : </p>
+    <ul>
+      <li>méthodes de string, <span class='italique'>trim(), toLowerCase()</span></li>
+      <li>méthodes de Math, <span class='italique'>Math.floor(), Math.random()</span></li>
+      <li>les conditionnels (<span class='italique'>if, else if, else</span>)</li>
+      <li>les tableaux</li>
+      <li>méthodes de tableau, <span class='italique'>includes()</span></li>
+    </ul>
+
+    <p><span class='graisse-normale'>Évaluation : </span> Ce devoir a un poids de 3 et sera évalué selon cette <a href='https://drive.google.com/file/d/1jg9OzgBymxxG9Dke8hkFva-zu55r9g-m/view?usp=sharing' target='_blank'>grille d'évaluation</a>.</p>
+    <p>Une note sur l'évaluation : Pour avoir une note élevée, ton programme devraient être à la fois <span class='graisse-normale italique'>fiable</span> et <span class='graisse-normale italique'>convivial</span>. Fiable veut dire que le programme peut gérer des entrées d'utilisateur inhabituelles et inattendues. Convivial veut dire que le programme est facile à utiliser, les instructions sont claires pour l'utilisateur et le dialogue est intéressant.</p>
+    <p><span class='graisse-normale'>Évaluation par ses pairs : </span><details class='bleu'>
+      <summary>
+        <span class='graisse-normale'>Faire un clic ici pour voir qui évaluera ton travail : </span>
+      </summary>
+      <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 1</a> sera évalué par les élèves <span class='graisse-normale'>8 et 11</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 2</a> sera évalué par les élèves <span class='graisse-normale'>7 et 10</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 3</a> sera évalué par les élèves <span class='graisse-normale'>5 et 7</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 4</a> sera évalué par les élèves <span class='graisse-normale'>3 et 9</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 5</a> sera évalué par les élèves <span class='graisse-normale'>10 et 4</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 6</a> sera évalué par les élèves <span class='graisse-normale'>11 et 13</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 7</a> sera évalué par les élèves <span class='graisse-normale'>9 et 5</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 8</a> sera évalué par les élèves <span class='graisse-normale'>6 et 3</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 9</a> sera évalué par les élèves <span class='graisse-normale'>4 et 8</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 10</a> sera évalué par les élèves <span class='graisse-normale'>13 et 2</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 11</a> sera évalué par les élèves <span class='graisse-normale'>1 et </span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 13</a> sera évalué par les élèves <span class='graisse-normale'>2 et 6</span>.</li>
+    </ol>
+    </details></p><p class='graisse-normale'>Leçons pertinentes</p>
+    <ul>
+      <li>exercice pour pratiquer : Créer une liste de noms et demander à l'utilisateur son nom. Si leur nom est dans la liste, donner une certaine réponse.</li>
+      <li><a href='https://www.pierre-giraud.com/javascript-apprendre-coder-cours/objet-string/' target='_blank'><span class='italique'>trim(), toLowerCase(), includes()</span> - Pierre Giraud</a></li>
+      <li><a href='https://youtu.be/ep4-dpA-pUw?t=1049' target='_blank'><span class='italique'>trim()</span> - vidéo Pierre Giraud</a></li>
+      <li><a href='https://youtu.be/ep4-dpA-pUw?t=90' target='_blank'><span class='italique'>toLowerCase()</span> - vidéo Pierre Giraud</a></li>
+      <li><a href='https://youtu.be/yfwFkEqdJu0?t=752' target='_blank'><span class='italique'>includes()</span> - vidéo</a></li>
+
+    </ul>
+
+    <p class='gros'><a href='https://youtu.be/3qD5moylsZ0' target='_blank'>Exemple du produit final</a></p>
+
+    <hr>
+
+  </section>
+
+  <section class='devoir'>
+    <h2 class='centre' id='devinettes'>Jeu des devinettes</h2>
+    <p class='graisse-normale centre'>Date d'achèvement estimée (durée) : <span class='date-achevement marge'>28 janvier</span> (2 cours)</p>
+    <p><span class='graisse-normale'>Consignes : </span>Il y aura deux (2) joueurs. Le programme donnera au joueur 1 un sujet général. Le joueur 1 va entrer un mot associé avec le sujet. Ensuite, nous allons effacer l'écran. Le programme donnera au joueur 2 le même sujet général et joueur 2 aura 3 tentatives pour deviner le mot du joueur 1.</p>
+    <p>Il faut utiliser le français en tout temps. La communication entre le programme et l'utilisateur, les commentaires dans le code et même les noms des variables et des fonctions doivent être tous en français.</p>
+    <p>Il faut utiliser les concepts JavaScript suivants : </p>
+    <ul>
+      <li>les boucles <span class='italique'>for</span></li>
+    </ul>
+
+    <p><span class='graisse-normale'>Évaluation : </span> Ce devoir a un poids de 5 et sera évalué selon cette <a href='https://drive.google.com/file/d/1jg9OzgBymxxG9Dke8hkFva-zu55r9g-m/view?usp=sharing' target='_blank'>grille d'évaluation</a>.</p>
+    <p>Une note sur l'évaluation : Pour avoir une note élevée, ton programme devraient être à la fois <span class='graisse-normale italique'>fiable</span> et <span class='graisse-normale italique'>convivial</span>. Fiable veut dire que le programme peut gérer des entrées d'utilisateur inhabituelles et inattendues. Convivial veut dire que le programme est facile à utiliser, les instructions sont claires pour l'utilisateur et le dialogue est intéressant.
+  </p><p>
+  D'autres fonctions possibles : sujet général aléatorie, rendre le jeu rejouable (agréable à rejouer plusieurs fois), dire à l'utilisateur si un mot a déjà été essayé, dire à l'utilisateur combien de tentatives restent, utiliser les vrais noms des utilisateurs, permettre de choisir le nombre de tentatives qu'aura Joueur 2, etc.</p>
+    <p><span class='graisse-normale'>Évaluation par ses pairs : </span><details class='bleu'>
+      <summary>
+        <span class='graisse-normale'>Faire un clic ici pour voir qui évaluera ton travail : </span>
+      </summary>
+      <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 1</a> sera évalué par les élèves <span class='graisse-normale'>8 et 13</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 2</a> sera évalué par les élèves <span class='graisse-normale'>11 et </span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 3</a> sera évalué par les élèves <span class='graisse-normale'>7 et 6</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 4</a> sera évalué par les élèves <span class='graisse-normale'>10 et 1</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 5</a> sera évalué par les élèves <span class='graisse-normale'>2 et 3</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 6</a> sera évalué par les élèves <span class='graisse-normale'>9 et 5</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 7</a> sera évalué par les élèves <span class='graisse-normale'>6 et 2</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 8</a> sera évalué par les élèves <span class='graisse-normale'>13 et 4</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 9</a> sera évalué par les élèves <span class='graisse-normale'>3 et 8</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 10</a> sera évalué par les élèves <span class='graisse-normale'>1 et 7</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 11</a> sera évalué par les élèves <span class='graisse-normale'>4 et 10</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 13</a> sera évalué par les élèves <span class='graisse-normale'>5 et 9</span>.</li>
+    </ol>
+    </details></p><p class='graisse-normale'>Leçons pertinentes</p>
+    <ul>
+      <li><a href='https://smnarnold.com/cours/javascript/boucle-for' target='_blank'>les <span class='italique'>boucles for</span> - SMNArnold</a></li>
+      <li><a href='https://smnarnold.com/exercices/javascript/boucle-for-fast-and-furious' target='_blank'>exercice: Fast and Furious - SMNArnold</a></li>
+      <li><a href='https://smnarnold.com/exercices/javascript/boucle-for-tableau-fast-and-furious' target='_blank'>exercice: tableau Fast and Furious - SMNArnold</a></li>
+      <li><a href='https://youtu.be/xxmb6z-69XQ' target='_blank'>les boucles <span class='italique'>for</span> - vidéo</a></li>
+
+    </ul>
+
+    <p class='gros'><a href='https://youtu.be/JVmRUvXKVtU' target='_blank'>Exemple du produit final</a></p>
+
+    <hr>
+
+  </section>
+
+  <section class='devoir'>
+    <h2 class='centre' id='cartesmemoires'>Cartes mémoires (flashcards)</h2>
+    <p class='graisse-normale centre'>Date d'achèvement estimée (durée) : <span class='date-achevement marge'>7 février</span> (3 cours)</p>
+    <p><span class='graisse-normale'>Consignes : </span>Créer un programme de cartes mémoires (flashcards) qui pose une série de questions. Le programme va poser ces questions à l'utilisateur et dire si la réponse était bonne ou mauvaise. La programme se termine quand toute les questions ont été posées ou quand l'utilisateur entre « fini ».</p>
+    <p>Il faut utiliser le français en tout temps. La communication entre le programme et l'utilisateur, les commentaires dans le code et même les noms des variables et des fonctions doivent être tous en français.</p>
+    <p>Il faut utiliser les concepts JavaScript suivants : </p>
+    <ul>
+      <li>les tableaux</li>
+      <li>les boucles <span class='italique'>for</span></li>
+      <li>la méthode de tableau <span class='italique'> .length()</span></li>
+      <li><span class='italique'>break;</span> (pour sortir d'une boucle)</li>
+    </ul>
+
+    <p><span class='graisse-normale'>Évaluation : </span> Ce devoir a un poids de 5 et sera évalué selon cette <a href='https://drive.google.com/file/d/1jg9OzgBymxxG9Dke8hkFva-zu55r9g-m/view?usp=sharing' target='_blank'>grille d'évaluation</a>.</p>
+    <p>Une note sur l'évaluation : Pour avoir une note élevée, ton programme devraient être à la fois <span class='graisse-normale italique'>fiable</span> et <span class='graisse-normale italique'>convivial</span>. Fiable veut dire que le programme peut gérer des entrées d'utilisateur inhabituelles et inattendues. Convivial veut dire que le programme est facile à utiliser, les instructions sont claires pour l'utilisateur et le dialogue est intéressant.
+  </p><p>
+  D'autres fonctions possibles : questions aléatoires, afficher un score (pointage), répéter les questions auxquelles l'utilisateur avait des mauvaises réponses, etc.</p>
+    <p><span class='graisse-normale'>Évaluation par ses pairs : </span><details class='bleu'>
+      <summary>
+        <span class='graisse-normale'>Faire un clic ici pour voir qui évaluera ton travail : </span>
+      </summary>
+      <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 1</a> sera évalué par les élèves <span class='graisse-normale'>3 et 6</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 2</a> sera évalué par les élèves <span class='graisse-normale'>6 et 10</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 3</a> sera évalué par les élèves <span class='graisse-normale'>4 et 2</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 4</a> sera évalué par les élèves <span class='graisse-normale'>11 et 1</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 5</a> sera évalué par les élèves <span class='graisse-normale'>9 et 7</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 6</a> sera évalué par les élèves <span class='graisse-normale'>13 et 9</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 7</a> sera évalué par les élèves <span class='graisse-normale'>2 et 5</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 8</a> sera évalué par les élèves <span class='graisse-normale'>7 et 11</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 9</a> sera évalué par les élèves <span class='graisse-normale'>5 et 13</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 10</a> sera évalué par les élèves <span class='graisse-normale'>8 et 4</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 11</a> sera évalué par les élèves <span class='graisse-normale'>1 et 8</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 13</a> sera évalué par les élèves <span class='graisse-normale'>10 et 3</span>.</li>
+    </ol>
+    </details></p><p class='graisse-normale'>Leçons pertinentes</p>
+    <ul>
+      <li><a href='https://smnarnold.com/cours/javascript/tableau#length' target='_blank'>la méthode de tableau <span class='italique'> .length()</span></a></li>
+      <li><a href='https://youtu.be/31lXoHdMJok' target='_blank'>Comment utiliser un tableau avec une boucle <span class='italique'>for</span> - vidéo</a></li>
+      <li><a href='https://www.youtube.com/watch?v=KkQSNNs_L9g' target='_blank'>Les méthodes de tableau (pour aller plus loin) - vidéo</a></li>
+      <li><a href='https://www.pierre-giraud.com/javascript-apprendre-coder-cours/tableau-objet-array' target='_blank'>Les méthodes de tableau (pour aller plus loin) - article</a></li>
+      <li><a href='https://www.pierre-giraud.com/javascript-apprendre-coder-cours/boucle-while-do-for-in/' target='_blank'>Utiliser une instruction break pour sortir prématurément d’une boucle (vers le bas de l'article)</a></li>
+      <li><a href='https://youtu.be/HBYnAA3aWZI' target='_blank'>la méthode de tableau <span class='italique'> .length()</span> avec une boucle <span class='italique'>for</span> - vidéo</a></li>
+
+    </ul>
+
+    <hr>
+
+  </section>
+
+  <section class='devoir'>
+    <h2 class='centre' id='grotte'>La Grotte</h2>
+    <p class='graisse-normale centre'>Date d'achèvement estimée (durée) : <span class='date-achevement marge'>15 février</span> (3 cours)</p>
+    <p><span class='graisse-normale'>Consignes : </span>Créer un programme qui représente une grotte (caverne) qui descend dans la Terre. Ça doit être généré de façon aléatoire pour donner l'impression que c'est « naturel ». Voir l'exemple pour mieux comprendre.</p>
+    <p>Il faut utiliser le français en tout temps. La communication entre le programme et l'utilisateur, les commentaires dans le code et même les noms des variables et des fonctions doivent être tous en français.</p>
+    <p>Il faut utiliser les concepts JavaScript suivants : </p>
+    <ul>
+      <li>méthode de string, <span class='italique'>repeat()</span></li>
+      <li>les boucles <span class='italique'>for</span></li>
+      <li>interagir avec la page web avec <span class='italique'> document.getElementById().innerHTML</span></li>
+      <li><span class='italique'>Math.random()</span></li>
+    </ul>
+
+    <p><span class='graisse-normale'>Évaluation : </span> Ce devoir a un poids de 5 et sera évalué selon cette <a href='https://drive.google.com/file/d/1jg9OzgBymxxG9Dke8hkFva-zu55r9g-m/view?usp=sharing' target='_blank'>grille d'évaluation</a>.</p>
+    <p>Une note sur l'évaluation : Pour avoir une note élevée, ton programme devraient être à la fois <span class='graisse-normale italique'>fiable</span> et <span class='graisse-normale italique'>convivial</span>. Fiable veut dire que le programme peut gérer des entrées d'utilisateur inhabituelles et inattendues. Convivial veut dire que le programme est facile à utiliser, les instructions sont claires pour l'utilisateur et le dialogue est intéressant.
+  </p><p>
+  D'autres fonctions possibles : d'autres types de variation des murs de la grotte, des petites cavernes non connexes qui apparaissent dans les murs, des « roches » placées de façon aléatoire dans la grotte, etc.</p>
+    <p><span class='graisse-normale'>Évaluation par ses pairs : </span><details class='bleu'>
+      <summary>
+        <span class='graisse-normale'>Faire un clic ici pour voir qui évaluera ton travail : </span>
+      </summary>
+      <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 1</a> sera évalué par les élèves <span class='graisse-normale'>4 et 5</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 2</a> sera évalué par les élèves <span class='graisse-normale'>10 et 7</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 3</a> sera évalué par les élèves <span class='graisse-normale'>8 et 11</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 4</a> sera évalué par les élèves <span class='graisse-normale'>11 et 1</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 5</a> sera évalué par les élèves <span class='graisse-normale'>9 et 6</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 6</a> sera évalué par les élèves <span class='graisse-normale'>1 et 13</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 7</a> sera évalué par les élèves <span class='graisse-normale'>5 et 4</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 8</a> sera évalué par les élèves <span class='graisse-normale'>2 et 3</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 9</a> sera évalué par les élèves <span class='graisse-normale'>6 et 8</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 10</a> sera évalué par les élèves <span class='graisse-normale'>7 et 9</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 11</a> sera évalué par les élèves <span class='graisse-normale'>13 et 2</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 13</a> sera évalué par les élèves <span class='graisse-normale'>3 et 10</span>.</li>
+    </ol>
+    </details></p><p class='graisse-normale'>Leçons pertinentes</p>
+    <ul>
+      <li><a href='https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/String/repeat' target='_blank'>méthode de string, <span class='italique'>repeat()</span> - Mozilla Developer Network</a></li>
+      <li><a href='https://youtu.be/FM0U_W1HzqU' target='_blank'>méthode de string, <span class='italique'>repeat()</span> - vidéo</a></li>
+      <li><a href='https://youtu.be/gDvyV4H5Ya4' target='_blank'>Comment interagir avec une page web - vidéo</a></li>
+      <li><a href='https://youtu.be/bn3Lj_Ix5FA' target='_blank'>Comment commencer cet exercice (La grotte) - vidéo</a></li>
+
+    </ul>
+
+    <p class='gros'><a href='https://youtu.be/9aG7rDMxbMg' target='_blank'>Exemple du produit final</a></p>
+
+    <hr>
+
+  </section>
+
+  <section class='devoir'>
+    <h2 class='centre' id='calculbot'>Calculbot</h2>
+    <p class='graisse-normale centre'>Date d'achèvement estimée (durée) : <span class='date-achevement marge'>23 février</span> (2 cours)</p>
+    <p><span class='graisse-normale'>Consignes : </span>Créer un programme que demande à l'utilisateur un premier chiffre et un deuxième. Ensuite, demander à l'utilisateur de choisir une opération mathématique. Le programme fera le calcul et affichera le résultat.</p>
+    <p>Il faut utiliser le français en tout temps. La communication entre le programme et l'utilisateur, les commentaires dans le code et même les noms des variables et des fonctions doivent être tous en français.</p>
+    <p>Il faut utiliser les concepts JavaScript suivants : </p>
+    <ul>
+      <li>opérateurs arithmétiques (<span class='italique'>+, -, /, *, **, %</span>)</li>
+      <li>convertir une chaîne de caractères <span class='italique'>(string)</span> en nombre</li>
+    </ul>
+
+    <p><span class='graisse-normale'>Évaluation : </span> Ce devoir a un poids de 3 et sera évalué selon cette <a href='https://drive.google.com/file/d/1jg9OzgBymxxG9Dke8hkFva-zu55r9g-m/view?usp=sharing' target='_blank'>grille d'évaluation</a>.</p>
+    <p>Une note sur l'évaluation : Pour avoir une note élevée, ton programme devraient être à la fois <span class='graisse-normale italique'>fiable</span> et <span class='graisse-normale italique'>convivial</span>. Fiable veut dire que le programme peut gérer des entrées d'utilisateur inhabituelles et inattendues. Convivial veut dire que le programme est facile à utiliser, les instructions sont claires pour l'utilisateur et le dialogue est intéressant.
+  </p><p>
+  D'autres fonctions possibles : accepter plusieurs manières d'entrér l'opérateur (ex. +, plus, additionner, sommer), offrir la possibilité de faire un autre calcul avec le résultat, etc.</p>
+    <p><span class='graisse-normale'>Évaluation par ses pairs : </span><details class='bleu'>
+      <summary>
+        <span class='graisse-normale'>Faire un clic ici pour voir qui évaluera ton travail : </span>
+      </summary>
+      <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 1</a> sera évalué par les élèves <span class='graisse-normale'>11 et 4</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 2</a> sera évalué par les élèves <span class='graisse-normale'>6 et 8</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 3</a> sera évalué par les élèves <span class='graisse-normale'>8 et 1</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 4</a> sera évalué par les élèves <span class='graisse-normale'>5 et 11</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 5</a> sera évalué par les élèves <span class='graisse-normale'>9 et 10</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 6</a> sera évalué par les élèves <span class='graisse-normale'>13 et 7</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 7</a> sera évalué par les élèves <span class='graisse-normale'>1 et 2</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 8</a> sera évalué par les élèves <span class='graisse-normale'>2 et 9</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 9</a> sera évalué par les élèves <span class='graisse-normale'>10 et 3</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 10</a> sera évalué par les élèves <span class='graisse-normale'>3 et 13</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 11</a> sera évalué par les élèves <span class='graisse-normale'>7 et 6</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 13</a> sera évalué par les élèves <span class='graisse-normale'>4 et 5</span>.</li>
+    </ol>
+    </details></p><p class='graisse-normale'>Leçons pertinentes</p>
+    <ul>
+      <li><a href='https://www.delftstack.com/fr/howto/javascript/convert-string-to-number-javascript/' target='_blank'>Convertir une chaîne en un nombre en JavaScript - DelftStack</a></li>
+      <li><a href='https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/parseInt' target='_blank'><span class='italique'>parseInt()</span></a></li>
+      <li><a href='https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/parseFloat' target='_blank'><span class='italique'>parseFloat()</span></a></li>
+
+    </ul>
+
+    <hr>
+
+  </section>
+
+
+  <section class='devoir'>
+    <h2 class='centre' id='factorisation'>Factorisation</h2>
+    <p class='graisse-normale centre'>Date d'achèvement estimée (durée) : <span class='date-achevement marge'>4 avril</span> (3 cours)</p>
+    <p><span class='graisse-normale'>Consignes : </span>Créer un programme que accepte un nombre entier de l'utilisateur, trouve tous les facteurs (diviseurs) de cet entier, les ajoute à un tableau, et imprime la liste des facteurs.
+  Par exemple: résultat « Les facteurs de 12 sont 1, 2, 3, 4, 6, 12 » (stocké dans le programme comme [1, 2, 3, 4, 6, 12])</p>
+    <p>Il faut utiliser le français en tout temps. La communication entre le programme et l'utilisateur, les commentaires dans le code et même les noms des variables et des fonctions doivent être tous en français.</p>
+    <p>Il faut utiliser les concepts JavaScript suivants : </p>
+    <ul>
+      <li>les boucles <span class='italique'>for</span></li>
+      <li>convertir une chaîne de caractères <span class='italique'>(string)</span> en nombre</li>
+      <li>méthode de string, <span class='italique'>join()</span></li>
+      <li>méthode de string, <span class='italique'>push()</span></li>
+    </ul>
+
+    <p><span class='graisse-normale'>Évaluation : </span> Ce devoir a un poids de 3 et sera évalué selon cette <a href='https://drive.google.com/file/d/1jg9OzgBymxxG9Dke8hkFva-zu55r9g-m/view?usp=sharing' target='_blank'>grille d'évaluation</a>.</p>
+    <p>Une note sur l'évaluation : Pour avoir une note élevée, ton programme devraient être à la fois <span class='graisse-normale italique'>fiable</span> et <span class='graisse-normale italique'>convivial</span>. Fiable veut dire que le programme peut gérer des entrées d'utilisateur inhabituelles et inattendues. Convivial veut dire que le programme est facile à utiliser, les instructions sont claires pour l'utilisateur et le dialogue est intéressant.
+  </p><p>
+  D'autres fonctions possibles : des entrées multiples, donner des options pour comment afficher les résultats, afficher les facteurs en pairs qui se multiplient ensemble pour former le nombre, afficher la liste en bon français (ex. 1, 2, 3, 4, 6 et 12).</p>
+    <p><span class='graisse-normale'>Évaluation par ses pairs : </span><details class='bleu'>
+      <summary>
+        <span class='graisse-normale'>Faire un clic ici pour voir qui évaluera ton travail : </span>
+      </summary>
+      <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 1</a> sera évalué par les élèves <span class='graisse-normale'>8 et 6</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 2</a> sera évalué par les élèves <span class='graisse-normale'>13 et 9</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 3</a> sera évalué par les élèves <span class='graisse-normale'>7 et 1</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 4</a> sera évalué par les élèves <span class='graisse-normale'>1 et 3</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 5</a> sera évalué par les élèves <span class='graisse-normale'>11 et 4</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 6</a> sera évalué par les élèves <span class='graisse-normale'>4 et 11</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 7</a> sera évalué par les élèves <span class='graisse-normale'>9 et 5</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 8</a> sera évalué par les élèves <span class='graisse-normale'>5 et 13</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 9</a> sera évalué par les élèves <span class='graisse-normale'>10 et 2</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 10</a> sera évalué par les élèves <span class='graisse-normale'>2 et 7</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 11</a> sera évalué par les élèves <span class='graisse-normale'>3 et 8</span>.</li>
+  <li><a class='bleu' href='https://jv.managebac.com/teacher/classes/11853334/files' target='_blank'>L'élève 13</a> sera évalué par les élèves <span class='graisse-normale'>6 et 10</span>.</li>
+    </ol>
+    </details></p><p class='graisse-normale'>Leçons pertinentes</p>
+    <ul>
+      <li><a href='https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/parseInt' target='_blank'><span class='italique'>parseInt()</span></a></li>
+      <li><a href='https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/join' target='_blank'>méthode de string, <span class='italique'>join()</span></a></li>
+      <li><a href='https://www.pierre-giraud.com/javascript-apprendre-coder-cours/tableau-objet-array/' target='_blank'>méthodes de string, <span class='italique'>push()</span> et <span class='italique'>join()</span></a></li>
+
+    </ul>
+
+    <p class='gros'><a href='https://youtu.be/OSSzGS9ckeY' target='_blank'>Exemple du produit final</a></p>
+
+    <hr>
+
+  </section>
+
+  <section class='devoir'>
+    <h2 class='centre' id='etoiles'>Étoiles</h2>
+    <p class='graisse-normale centre'>Date d'achèvement estimée (durée) : <span class='date-achevement marge'>8 avril</span> (2 cours)</p>
+    <p><span class='graisse-normale'>Consignes : </span>Créer un programme qui demande un chiffre (un entier) de l'utilisateur et affiche des étoiles disposées dans une configuration triangulaire. Voir l'exemple pour plus de détails.</p>
+    <p>Il faut utiliser le français en tout temps. La communication entre le programme et l'utilisateur, les commentaires dans le code et même les noms des variables et des fonctions doivent être tous en français.</p>
+    <p>Il faut utiliser les concepts JavaScript suivants : </p>
+    <ul>
+      <li>les boucles <span class='italique'>for</span> imbriquées</li>
+    </ul>
+
+    <p><span class='graisse-normale'>Évaluation : </span> Ce devoir a un poids de 2 et sera évalué selon cette <a href='https://drive.google.com/file/d/1jg9OzgBymxxG9Dke8hkFva-zu55r9g-m/view?usp=sharing' target='_blank'>grille d'évaluation</a>.</p>
+    <p>Une note sur l'évaluation : Pour avoir une note élevée, ton programme devraient être à la fois <span class='graisse-normale italique'>fiable</span> et <span class='graisse-normale italique'>convivial</span>. Fiable veut dire que le programme peut gérer des entrées d'utilisateur inhabituelles et inattendues. Convivial veut dire que le programme est facile à utiliser, les instructions sont claires pour l'utilisateur et le dialogue est intéressant.
+  </p><p>
+  D'autres fonctions possibles : forcer l'utilisateur d'entrer un entier, permettre l'utilisateur de choisir un symbole autre qu'une étoile, donner l'option de générer d'autres formes (losange, carré, rectangle, etc).</p>
+    <p><span class='graisse-normale'>Évaluation par ses pairs : </span>obligatoire, choisir deux autres élèves.</p><p class='graisse-normale'>Leçons pertinentes</p>
+    <ul>
+      <li><a href='https://fadagogo.com/codage_avec_JavaScript/html/ch06_ex_4_JS_les_boucles_for_imbriquees.html' target='_blank'>les boucles <span class='italique'>for</span> imbriquées</a></li>
+
+    </ul>
+
+    <p class='gros'><a href='https://youtu.be/Y1x_y8sOxQg' target='_blank'>Exemple du produit final</a></p>
+
+    <hr>
+
+  </section>
+
+
+  <section class='devoir'>
+    <h2 class='centre' id='fonction1'>Fonctions</h2>
+    <p class='graisse-normale centre'>Date d'achèvement estimée (durée) : <span class='date-achevement marge'>28 avril</span> (4 cours)</p>
+    <p><span class='graisse-normale'>Consignes : </span>Créer un programme avec une variable qui représente une quantité d'argent. Initialise cette variable avec un montant.</p>
+  <p>Ce programme aura aussi 2 fonctions :</p>
+  <ol>
+    <li>une fonctionne <span class='menu'>entierAleatoire</span> qui <span class='graisse-normale'>accepte</span> deux entiers <span class='menu'>minimum</span> et <span class='menu'>maximum</span> et <span class='graisse-normale'>retourne</span> un entier aléatoire entre (et incluant) ces deux valeurs.</li>
+    <li>une fonctionne <span class='menu'>différenceMontant</span> qui <span class='graisse-normale'>accepte</span> deux nombres, <span class='menu'>montantAvant</span> et <span class=menu>différence</span>, <span class='graisse-normale'>somme</span> les deux valeurs, <span class='graisse-normale'>affiche</span> combien l'utilisateur a gagné ou perdu et combien d'argent reste, et <span class='graisse-normale'>retourne</span> le montant restant.
+    <br>Exemples :
+    <ul>
+      <li>différenceMontant(50, -7) va afficher « Vous avez perdu 7$, il vous reste 43$ » et va retourner 43.</li>
+      <li>différenceMontant(250, 100) va afficher « Vous avez gagné $100, il vous reste $350 » et va retourner 350.</li></li>
+  </ol>
+  <p>Vous pouvez tester vos fonctions sur Codepen avec ces liens : <a href='https://codepen.io/snufflufikist/pen/YzexLWr'>entierAléatoire</a> et <a href='https://codepen.io/snufflufikist/pen/poarXWK?editors=0010'>différenceMontant</a>.
+  <p>Vos fonctions doivent respecter certaines règles :</p>
+  <ol>
+    <li>une fonctionne devrait être <span class='graisse-normale'>cohérente</span> (ne fait qu'une chose à la fois).</li>
+    <li>une fonctionne devrait être <span class='graisse-normale'>indépendante</span> (ne modifie pas des variables globales).</li>
+    <li>une fonctionne devrait être <span class='graisse-normale'>concise</span> (court, simple à comprendre et bien commenté).</li>
+  </ol></p>
+    <p>Il faut utiliser le français en tout temps. La communication entre le programme et l'utilisateur, les commentaires dans le code et même les noms des variables et des fonctions doivent être tous en français.</p>
+    <p>Il faut utiliser les concepts JavaScript suivants : </p>
+    <ul>
+      <li>Déclaration de fonction</li>
+      <li>Variables locales d'une fonction</li>
+      <li>Variables externes (globales)</li>
+      <li>les arguments d'une fonction</li>
+      <li>Renvoyer une valeur <span class='italique'>return</span></li>
+      <li><span class='italique'>Math.random()</span></li>
+    </ul>
+
+    <p><span class='graisse-normale'>Évaluation : </span> Ce devoir a un poids de 4 et sera évalué selon cette <a href='https://drive.google.com/file/d/1jg9OzgBymxxG9Dke8hkFva-zu55r9g-m/view?usp=sharing' target='_blank'>grille d'évaluation</a>.</p>
+    <p>Une note sur l'évaluation : Pour avoir une note élevée, ton programme devraient être à la fois <span class='graisse-normale italique'>fiable</span>, <span class='graisse-normale italique'>convivial</span> et <span class='graisse-normale italique'>bien commenté</span>. Fiable veut dire que le programme peut gérer des entrées d'utilisateur inhabituelles et inattendues. Convivial veut dire que le programme est facile à utiliser, les instructions sont claires pour l'utilisateur et le dialogue est intéressant. Bien commenté veut dire qu'il y a une introduction au début avec ton nom, la date et l'objectif du programme ainsi que des commentaires pour expliquer tout qui n'est pas évident.</p>
+  <p>Pour les fonctions, fiable et conviviale veut dire qu'elles sont <span class='graisse-normale italique'>cohérente, indépendante et concise</span>. Pour qu'une fonctionne soit bien commenté, tu dois expliquer ce que la fonctionne fait, quels paramètres (variables) la fonctionne accepte, quels sont les types de ces variables et quelles variables (avec leurs type) sont retournées par la fonctionne.
+  </p><p>D'autres fonctions possibles : à toi de décider. Pas nécessaire pour avoir une note de 100 % sur ce travail.</p>
+    <p><span class='graisse-normale'>Évaluation par ses pairs : </span>obligatoire, choisir deux autres élèves.</p><p class='graisse-normale'>Leçons pertinentes</p>
+    <ul>
+      <li><a href='https://fr.javascript.info/function-basics#resume' target='_blank'>résumé des fonctions - javascript.info</a></li>
+      <li><a href='https://fr.javascript.info/function-basics#declaration-de-fonction' target='_blank'>Déclaration de fonction - javascript.info</a></li>
+      <li><a href='https://fr.javascript.info/function-basics#variables-locales' target='_blank'>Variables locales d'une fonction - javascript.info</a></li>
+      <li><a href='https://fr.javascript.info/function-basics#variables-externes' target='_blank'>Variables externes (globales) - javascript.info</a></li>
+      <li><a href='https://fr.javascript.info/function-basics#arguments' target='_blank'>les arguments d'une fonction - javascript.info</a></li>
+      <li><a href='https://fr.javascript.info/function-basics#renvoyer-une-valeur' target='_blank'>Renvoyer une valeur <span class='italique'>return</span> - javascript.info</a></li>
+      <li><a href='https://smnarnold.com/cours/javascript/function' target='_blank'>les fonctions - SMNArnold</a></li>
+      <li><a href='https://smnarnold.com/exercices/javascript/function-little-mac' target='_blank'>exercice: Little Mac - SMNArnold</a></li>
+      <li><a href='https://www.pierre-giraud.com/javascript-apprendre-coder-cours/presentation-fonction/' target='_blank'>les fonctions - Pierre Giraud</a></li>
+      <li><a href='https://smnarnold.com/cours/javascript/const-and-let#contexte-scope' target='_blank'>le contexte (scope) des variables - SMNArnold</a></li>
+      <li><a href='https://www.pierre-giraud.com/javascript-apprendre-coder-cours/portee-variable-return-fonction/' target='_blank'>la portée des variables et retour des fonctions - Pierre Giraud</a></li>
+
+    </ul>
+
+    <hr>
+
+  </section>
+
+  <section class='devoir'>
+    <h2 class='centre' id='gratteux'>Gratteux</h2>
+    <p class='graisse-normale centre'>Date d'achèvement estimée (durée) : <span class='date-achevement marge'>10 mai</span> (4 cours)</p>
+    <p><span class='graisse-normale'>Consignes : </span>Créer une copie de ton travail Fonctions et ajouter une nouvelle fonction qui simule un gratteux. Un gratteux est un jeu de chance en forme de papier coloré et plastifié qui coûte un certain montant (souvent 3$, 5$, 10$ et 20$). On gratte certaines sections du gratteux pour révéler ce qui est caché (normalement des symboles qui doit être correspondants) et le prix qu'on gagne (ou qu'on aurait pu gagner). Le joueur gagne (ou non) un montant aléatoire. Le plus le montant qu'on gagne est élévé, le moins la probabilité de gagner ce montant l'est. Ton jeu doit respecter la règle « la casino gagne toujours » (The house always wins) et tu <span class='graisse-normale'>dois prouver</span> (mathématiquement ou programmatiquement) que c'est le cas (soit dans les commentaires, sur ton autoévaluation ou dans ton fichier .html). Ta fonction sera nommée <span class=menu>jouerGratteux</span> va <span class='graisse-normale'>accepter</span> un nombre <span class=menu>cout</span> et <span class='graisse-normale'>retourne</span> un nombre représentant le montant gagné (si positif) ou perdu (si négatif).</p>
+
+  <p> Ce projet deviendra un jeu de casino ou le joueur pourra joueur plusieurs jeux de chance. Il faut alors ajouter <span class='graisse-normale italique'>une boucle de jeu</span> avec un menu à ton programme. Pour le moment, ton menu contiendra juste une seule option, joueur un gratteux. Ton programme doit obligatoirement utiliser une fonction déjà créée dans le travail précédent, c'est à dire <span class=menu>différenceMontant</span>. Tu peux l'utiliser dans ta boucle de jeu. Si, pour générer l'aspect de hasard, ton programme se sert de <span class='italique'>Math.random()</span> pour créer des entiers aléatoires, alors tu dois aussi utiliser ta fonction <span class=menu>entierAléatoire</span>.</p>
+    <p>Il faut utiliser le français en tout temps. La communication entre le programme et l'utilisateur, les commentaires dans le code et même les noms des variables et des fonctions doivent être tous en français.</p>
+    <p>Il faut utiliser les concepts JavaScript suivants : </p>
+    <ul>
+      <li>fonctions</li>
+    </ul>
+
+    <p><span class='graisse-normale'>Évaluation : </span> Ce devoir a un poids de 4 et sera évalué selon cette <a href='https://drive.google.com/file/d/1jg9OzgBymxxG9Dke8hkFva-zu55r9g-m/view?usp=sharing' target='_blank'>grille d'évaluation</a>.</p>
+    <p>Une note sur l'évaluation : Pour avoir une note élevée, ton programme devraient être à la fois <span class='graisse-normale italique'>fiable</span>, <span class='graisse-normale italique'>convivial</span> et <span class='graisse-normale italique'>bien commenté</span>. Fiable veut dire que le programme peut gérer des entrées d'utilisateur inhabituelles et inattendues. Convivial veut dire que le programme est facile à utiliser, les instructions sont claires pour l'utilisateur et le dialogue est intéressant. Bien commenté veut dire qu'il y a une introduction au début avec ton nom, la date et l'objectif du programme ainsi que des commentaires pour expliquer tout qui n'est pas évident.</p>
+  <p>Pour les fonctions, fiable et conviviale veut dire qu'elles sont <span class='graisse-normale italique'>cohérente, indépendante et concise</span>. Pour qu'une fonctionne soit bien commenté, tu dois expliquer ce que la fonctionne fait, quels paramètres (variables) la fonctionne accepte, quels sont les types de ces variables et quelles variables (avec leurs type) sont retournées par la fonctionne.
+  </p><p>D'autres fonctions possibles : ajouter un argument (entier) <span class=menu>difficulté</span> représentant la difficulté (exemple 1, 2 ou 3). La difficulté augmentera la récompense sans augementer le coût à jouer, ajouter du texte qui aide à simuler l'acte de gratter (par exemple, donner des options pour des cases à gratter avant de réveler le résultat). </p>
+    <p><span class='graisse-normale'>Évaluation par ses pairs : </span>obligatoire, choisir deux autres élèves.</p><p class='graisse-normale'>Leçons pertinentes</p>
+    <ul>
+
+    </ul>
+
+    <hr>
+
+  </section>
+
+  <section class='devoir'>
+    <h2 class='centre' id='roulette'>Roulette</h2>
+    <p class='graisse-normale centre'>Date d'achèvement estimée (durée) : <span class='date-achevement marge'>24 mai</span> (4 cours)</p>
+    <p><span class='graisse-normale'>Consignes : </span>Créer une copie de ton travail Gratteux et ajouter une nouvelle fonction qui simule le jeu de roulette. La roulette est un jeu de hasard populaire dans les casinos. Voir les leçons pertinentes pour en apprendre plus. Il y a beaucoup de types de mises possibles, mais pour ce travail, on te demande de programmer les mises suivantes :</p>
+
+  <ol>
+  <li>numéro plein</li>
+  <li>manques ou passes</li>
+  <li>pair ou impair</li>
+  <li>rouge ou noir ou vert</li>
+  </ol>
+
+  <p>Ton jeu doit respecter la règle « la casino gagne toujours » (The house always wins) et tu <span class='graisse-normale'>dois prouver</span> (mathématiquement ou programmatiquement) que c'est le cas (soit dans les commentaires, sur ton autoévaluation ou dans ton fichier .html). Pour ce jeu, la page Wikipédia offre un <a href='https://fr.wikipedia.org/wiki/Roulette_(jeu_de_hasard)#Paiement_des_mises_gagnantes'>tableau des paiement des mise</a>. Ta fonction sera nommée <span class='menu'>jouerRoulette</span> va <span class='graisse-normale'>accepter</span> un nombre <span class='menu'>argentInitial</span> et <span class='graisse-normale'>retourne</span> un nombre représentant le montant gagné (si positif) ou perdu (si négatif).</p>
+
+  <p> Roulette sera le deuxième jeu de chance jouable dans ton casino. Il faut modifier ta boucle de jeu et ton menu. Ton programme doit obligatoirement utiliser des fonctions déjà créées dans les travaux précédents. Il faut aussi avoir un système pour assurer que le joueur a assez d'argent pour jouer chaque jeu. </p>
+    <p>Il faut utiliser le français en tout temps. La communication entre le programme et l'utilisateur, les commentaires dans le code et même les noms des variables et des fonctions doivent être tous en français.</p>
+    <p>Il faut utiliser les concepts JavaScript suivants : </p>
+    <ul>
+      <li>fonctions</li>
+    </ul>
+
+    <p><span class='graisse-normale'>Évaluation : </span> Ce devoir a un poids de 4 et sera évalué selon cette <a href='https://drive.google.com/file/d/1jg9OzgBymxxG9Dke8hkFva-zu55r9g-m/view?usp=sharing' target='_blank'>grille d'évaluation</a>.</p>
+    <p>Une note sur l'évaluation : Pour avoir une note élevée, ton programme devraient être à la fois <span class='graisse-normale italique'>fiable</span>, <span class='graisse-normale italique'>convivial</span> et <span class='graisse-normale italique'>bien commenté</span>. Fiable veut dire que le programme peut gérer des entrées d'utilisateur inhabituelles et inattendues. Convivial veut dire que le programme est facile à utiliser, les instructions sont claires pour l'utilisateur et le dialogue est intéressant. Bien commenté veut dire qu'il y a une introduction au début avec ton nom, la date et l'objectif du programme ainsi que des commentaires pour expliquer tout qui n'est pas évident.</p>
+  <p>Pour les fonctions, fiable et conviviale veut dire qu'elles sont <span class='graisse-normale italique'>cohérente, indépendante et concise</span>. Pour qu'une fonctionne soit bien commenté, tu dois expliquer ce que la fonctionne fait, quels paramètres (variables) la fonctionne accepte, quels sont les types de ces variables et quelles variables (avec leurs type) sont retournées par la fonctionne.
+  </p><p>D'autres fonctions possibles :
+
+  ajouter une interface graphique, soit sur la page html, soit avec du texte dans une alert(). Ajouter la possibilité de faire plus de mises, comme décris dans <a href='https://fr.wikipedia.org/wiki/Roulette_(jeu_de_hasard)#R%C3%A8gles_du_jeu'>la section de la page Wikipédia sur les mises</a>.</p>
+    <p><span class='graisse-normale'>Évaluation par ses pairs : </span>obligatoire, choisir deux autres élèves.</p><p class='graisse-normale'>Leçons pertinentes</p>
+    <ul>
+      <li><a href='https://www.youtube.com/watch?v=IhahQtOgnFQ' target='_blank'>Comment jouer à roulette - Vidéo</a></li>
+      <li><a href='https://fr.wikipedia.org/wiki/Roulette_(jeu_de_hasard)' target='_blank'>Règles de jeu pour la roulette européenne</a></li>
+
+    </ul>
+
+    <hr>
+
+  </section>
+
+  <section class='devoir'>
+    <h2 class='centre' id='hasard'>Jeu de hasard</h2>
+    <p class='graisse-normale centre'>Date d'achèvement estimée (durée) : <span class='date-achevement marge'>9 juin</span> (6 cours)</p>
+    <p><span class='graisse-normale'>Consignes : </span>Créer un jeu de hasard pour compléter ton casino. Si vous n'avez pas d'idées, n'oublie pas que tout jeu pourrait être un jeu de hasard si l'on doit payer pour jouer et s'il y a une récompense pour gagner! Jeux possibles : Blackjack, Yahtzee, Guerre, Pêche, etc. Ton jeu sera évalué selon sa complexité et la bonne utilisation des concepts appris cette année.</p>
+
+  <p>Ton jeu doit respecter la règle « la casino gagne toujours » (The house always wins) et tu <span class='graisse-normale'>dois prouver</span> (mathématiquement ou programmatiquement) que c'est le cas (soit dans les commentaires, sur ton autoévaluation ou dans ton fichier .html). </p>
+
+  <p>Ce jeu va compléter ton casino. Il faut modifier ta boucle de jeu et ton menu. Ton programme doit obligatoirement utiliser des fonctions déjà créées dans les travaux précédents. Il faut aussi avoir un système pour assurer que le joueur a assez d'argent avant de pouvoir jouer un jeu. </p>
+    <p>Il faut utiliser le français en tout temps. La communication entre le programme et l'utilisateur, les commentaires dans le code et même les noms des variables et des fonctions doivent être tous en français.</p>
+    <p>Il faut utiliser les concepts JavaScript suivants : </p>
+    <ul>
+      <li>aucun</li>
+    </ul>
+
+    <p><span class='graisse-normale'>Évaluation : </span> Ce devoir a un poids de 6 et sera évalué selon cette <a href='https://drive.google.com/file/d/1jg9OzgBymxxG9Dke8hkFva-zu55r9g-m/view?usp=sharing' target='_blank'>grille d'évaluation</a>.</p>
+    <p>Une note sur l'évaluation : Pour avoir une note élevée, ton programme devraient être à la fois <span class='graisse-normale italique'>fiable</span>, <span class='graisse-normale italique'>convivial</span> et <span class='graisse-normale italique'>bien commenté</span>. Fiable veut dire que le programme peut gérer des entrées d'utilisateur inhabituelles et inattendues. Convivial veut dire que le programme est facile à utiliser, les instructions sont claires pour l'utilisateur et le dialogue est intéressant. Bien commenté veut dire qu'il y a une introduction au début avec ton nom, la date et l'objectif du programme ainsi que des commentaires pour expliquer tout qui n'est pas évident.</p>
+  <p>Pour les fonctions, fiable et conviviale veut dire qu'elles sont <span class='graisse-normale italique'>cohérente, indépendante et concise</span>. Pour qu'une fonctionne soit bien commenté, tu dois expliquer ce que la fonctionne fait, quels paramètres (variables) la fonctionne accepte, quels sont les types de ces variables et quelles variables (avec leurs type) sont retournées par la fonctionne.</p>
+    <p><span class='graisse-normale'>Évaluation par ses pairs : </span>obligatoire, choisir trois autres élèves.</p><p class='graisse-normale'>Leçons pertinentes</p>
+    <ul>
+      <li>aucun</li>
+
+    </ul>
+
+    <hr>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </main>
+
+  <footer>
+    <h2 id='remerciements' class='centre'>
+      Remerciements
+    </h2>
+    <p>
+      Merci infiniment à <a href='http://vantechcs.000webhostapp.com/'>M. Woo</a> et à <a href='https://smnarnold.com/cours/javascript'>Simon Arnold</a> de l'inspiration est des ressources.
+    </p>
+  </footer>
+
+  </body>
+
+  </html>
