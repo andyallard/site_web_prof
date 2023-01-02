@@ -31,7 +31,7 @@
   <meta name='msapplication-config' content='icons/browserconfig.xml'>
   <meta name='theme-color' content='#ffffff'>
 
-  <script src='javascript.js' charset='utf-8' async></script>
+  <script src='javascript.js' async></script>
 
 </head>
 <body>
@@ -100,9 +100,10 @@
       
       <h2 id='ressources'>Ressources</h2>
       <ol>
-        <li><a href="#liens-utiles">Liens utiles</a></li>
+        <li><a href="https://validator.w3.org/">Validateur HTML</a></li>
+        <li><a href="https://gsnedders.html5.org/outliner/">Outliner HTML</a></li>
         <li><a href='#ressources-emmet'>Ressources Emmet</a></li>
-        <li><a href='#teletype'>Teletype</a></li>
+        <!-- <li><a href='#teletype'>Teletype</a></li> -->
         <li><a href="#erreurs-validateur">Solutions aux erreurs trouvées par le validateur</a></li>
       </ol>
 
@@ -113,151 +114,35 @@
 
   <main>
 
-    <h2>Liens utiles</h2>
-
-    <section id="liens-utiles">
-
-      <h3>Vérification</h3>
-      <ul>
-        <li><a href="https://validator.w3.org/">Validateur HTML</a></li>
-        <li><a href="https://gsnedders.html5.org/outliner/">Outliner HTML</a></li>
-      </ul>
-
-      <hr>
-
-    </section>
-
-    <h2>Ressources</h2>
-
-    <section id="ressources-emmet">
-
-      <h3>Emmet</h3>
-      <ul>
-        <li><a href="https://docs.emmet.io/abbreviations/syntax/">Syntaxe de base Emmet (anglais)</a></li>
-        <li>En plus que développer des expressions courtes, Emmet a <a href="https://docs.emmet.io/actions/">d'autres fonctions</a> qui pourraient être utiles (anglais)</li>
-        <li>Emmet <a href="https://docs.emmet.io/cheat-sheet/">cheat sheet (anglais)</a></li>
-        <li>Article court de <a href="https://smnarnold.com/cours/html/emmet">SMNArnold</a> qui explique les bases. (français)</li>
-
-        <p>Pour voir la liste de raccourcis clavier dans Atom, faire <span class="menu">Fichier</span> > <span class="menu">Paramètres</span> et ensuite selectionner <span class="menu">Keybindings</span>.</p>
-
-        <p><a href="https://docs.emmet.io/abbreviations/syntax/">Un conseil</a> directement des développeurs d'Emmet :</p>
-        <blockquote>You don’t really need to write complex abbreviations... You’ll quickly find out that constructing a single complex abbreviation is much slower and error-prone than constructing and typing a few short ones.</blockquote>
-      </ul>
-
-    </section>
-
-    <!-- <section id='teletype'>
-      <h3>Teletype</h3>
-      <p>Teletype est une extension (package) pour Atom qui permet l'utilisateur de collaborer en temps réel (comme Google Docs).</p>
-      <p>Suis les instructions suivantes pour l'installer</p>
-      <ol class='aere'>
-        <li>Installe le package <span class="italique">teletype</span><a href=""></a>
-          <ol>
-            <li>Dans Atom > <span class="menu">Fichier</span> > <span class="menu">Paramètres</span></li>
-            <li>Fais un clic sur <span class="graisse-normale">+</span>install</li>
-            <li>Dans la boîte de recherche, tape « teletype »</li>
-            <li>Fais un clic sur <span class="styleButton">install</span></li>
-          </ol>
-        </li>
-        <li>Crée un compte <a href="https://github.com/">Github</a> <span class="graisse-normale">jetable</span>.
-          <ul>
-            <li>Fais toutes les étapes du processus avec la <span class="graisse-normale">navigation privée</span>. Il faudra utiliser Safari, <span class="menu">Fichier</span> > <span class="menu">Nouvelle fenêtre privée</span>.</li>
-            <li>N'utilise <span class="graisse-normale">pas</span> un compte courriel personnel ou institutionnel (du CSF).<a href=""></a></li>
-            <li><span class="graisse-normale">Utilise</span> une service de courriel jetable (ex. <a href="https://www.throwaway.io/">Throwaway.io</a>).</li>
-            <li>N'utiliser ce compte <span class="graisse-normale">que</span> pour teletype dans le contexte de ce cours.<a href=""></a></li>
-          </ul>
-        </li>
-        <li>Dans Atom, fais un clic sur le petit icon (en bas et à droite) qui à l'air d'une tour de radio (à gauche de l'icon pour Github).<a href=""></a></li>
-        <li>Copie le lien pour avoir un jeton d'accès OAuth<a href=""></a></li>
-        <li>Colle ce lien dans un nouvel onglet dans ta navigation privée. Tu devrais toujours être connecté.e à ton compte Github jetable.<a href=""></a></li>
-        <li>Partage le URL de ton portal pour collaborer en temps réel.<a href=""></a></li>
-        <li>Si jamais tu perds ton accès, répète ces étapes pour créer un nouveau compte jetable et jeton d'accès OAuth.</li>
-      </ol>
-    </section> -->
-
-    <section id="erreurs-validateur">
-      <h3>Solutions aux erreurs trouvées par le validateur</h3>
-
-      <p>Le <a href="https://validator.w3.org">validateur html</a> est incontournable pour trouver certaines erreurs dans le code html, mais il n’est pas toujours évident ce que veut dire les messages d’erreur. Voici une liste d’erreurs communes et leur solution.</p>
-
-      <ul class='aere'>
-
-        <li>
-          Stray start tag <span class='element'>footer</span>.
-
-          <details class='bleu'>
-            <summary>
-              <span class='graisse-normale'>Solution</span>
-            </summary>
-              l’élément <span class='element'>footer</span> doit être contenu dans l’élément <span class='element'>body</span>
-          </details>
-        </li>
-
-        <li>
-          End tag <span class='element'>XXX</span> seen, but there were open elements.<br>
-          Unclosed element <span class='element'>YYY</span>.
-
-          <details class='bleu'>
-            <summary class='graisse-normale'>Solution</summary> Quand vous voyez ces erreurs, mais que vous pensez avoir bien fermé vos éléments, vérifiez l’ordre de balises. Quand on imbrique les balises, il faut les emboîter. Pensez aux parentheses. <span class="pre">[(   ]     )</span> versus <span class="pre">[(    )    ]</span>.</li>
-          </details>
-        <li>
-          Bad value 325px for attribute <span class='element'>height</span> on element <span class='element'>iframe</span>: Expected a digit but saw p instead.<br>
-          Bad value 300px for attribute <span class='element'>height</span> on element <span class='element'>img</span>: Expected a digit but saw p instead.<br>
-
-          <details class='bleu'>
-            <summary class='graisse-normale'>Solution</summary> Dans un élément <span class='element'>iframe</span> ou <span class='element'>img</span>, il n’est pas nécessaire de mettre « px » après le chiffre.
-          </details>
-        </li>
-        <li>
-          Bad value 100% for attribute <span class='element'>width</span> on element <span class='element'>iframe</span>: Expected a digit but saw % instead.<br>
-          Bad value 100% for attribute <span class='element'>width</span> on element <span class='element'>img</span>: Expected a digit but saw % instead.<br>
-
-          <details class='bleu'>
-            <summary class='graisse-normale'>Solution</summary> Les pourcentages ne sont pas permis dans un élément <span class='element'>iframe</span> ou <span class='element'>img</span>. Mettez les pourcentages dans le CSS.
-          </details>
-        </li>
-        <li>
-          The <span class='element'>frameborder</span> attribute on the <span class='element'>iframe</span> element is obsolete. Use CSS instead.
-
-          <details class='bleu'>
-            <summary class='bleu graisse-normale'>Solution</summary> Exemple du CSS
-
-            <pre>
-              iframe {
-                  border-width: 0px;
-              }
-            </pre>
-          </details>
-        </li>
-      </ul>
-
-    </section>
-
-
-    <section id='exercices-emmet'>
-      <h3>Exercices Emmet</h3>
-
-      <h4 id='exercices-emmet-1'>Exercice 1</h4>
-      <p class="codepen" data-height="320" data-theme-id="dark" data-default-tab="html,result" data-slug-hash="ZEXZKZP" data-editable="true" data-user="snufflufikist" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-      <span>See the Pen <a href="https://codepen.io/snufflufikist/pen/ZEXZKZP">
-      Untitled</a> by o (<a href="https://codepen.io/snufflufikist">@snufflufikist</a>)
-      on <a href="https://codepen.io">CodePen</a>.</span>
-      </p>
-      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-
-      <hr>
-
-    </section>
-
     <section>
       <h2>Leçons</h2>
 
       <article>
-        <h3 id="structure-minimale">La structure minimale pour une page web fonctionnelle</h3>
+        <h3 id="lecon1">Leçon 1 - Eléments, balises et attributs HTML</h3>
+
+        <p>Lis les articles suivants</p>
+        
+        <ol>
+          <li><a href="https://www.pierre-giraud.com/html-css-apprendre-coder-cours/element-balise-attribut/">Eléments, balises et attributs HTML</a></li>
+          <li><a href="https://www.pierre-giraud.com/html-css-apprendre-coder-cours/titre-paragraphe/">Les titres et les paragraphes en HTML</a></li>
+        </ol>
+        
+        <hr>
+      </article>
+
+      <article>
+        <h3 id="lecon2">Leçon 2 - La structure minimale pour une page web fonctionnelle</h3>
+
+        <p>Lis les articles suivants</p>
+        
+        <ol>
+          <li><a href="https://www.pierre-giraud.com/html-css-apprendre-coder-cours/structure-minimale-page/">Structure minimale d’une page HTML valide</a></li>
+          <li><a href="https://www.pierre-giraud.com/html-css-apprendre-coder-cours/indentation-commentaire-html/">L’indentation et les commentaires en HTML</a></li>
+        </ol>
 
         <p>
           Pour qu'une page soit fonctionnelle, il faut inclure certaines
-          balises avec certaines paramètres.
+          balises avec certaines attributs.
         </p>
 
         <details>
@@ -278,26 +163,9 @@
 	
 &lt;/html&gt;
           </code>
+        </details>
 
         <hr>
-
-      </article>
-
-      <article>
-        <h3 id="lecon1">Eléments, balises et attributs HTML</h3>
-
-        <p>Un élément HTML </p>
-        
-        <a href="https://www.pierre-giraud.com/html-css-apprendre-coder-cours/element-balise-attribut/">Eléments, balises et attributs HTML</a>
-Les titres et les paragraphes en HTML
-
-
-        <p>
-          Voici une liste des éléments HTML les plus communs
-        </p>
-
-
-
       </article>
 
       <article>
@@ -370,7 +238,7 @@ Les titres et les paragraphes en HTML
           <li>Lis <a href="https://smnarnold.com/cours/html/semantique">cet article</a> sur la sémantique HTML.</li>
           <li>Lis <a href="https://marksheet.io/html-semantics.html">cet article</a> (en anglais) qui parle de la sémantique plus généralement.</li>
           <li>Relis <a href="https://smnarnold.com/cours/css/inspecteur">cet article sur l'inspecteur</a> et plus spécifiquement la section sur le <a href="https://smnarnold.com/cours/css/inspecteur#dom-tree">DOM tree</a> pour te préparer à faire les exercices suivants.</li>
-          <li>Quand tu cherches des éléments sémantiques dans les pages, fais la distinction entre un élément sémantique (Ex. <code class='graisse-normale'>&ltnav&gt</code>) et une classe (Ex. <code class='graisse-normale'>&ltdiv class="nav"&gt</code>)</li>
+          <li>Quand tu cherches des éléments sémantiques dans les pages, fais la distinction entre un élément sémantique (Ex. <code class='graisse-normale'>&lt;nav&gt;</code>) et une classe (Ex. <code class='graisse-normale'>&lt;div class="nav"&gt;</code>)</li>
           <li>L'outil <a href="https://gsnedders.html5.org/outliner/">HTML5 Outliner</a> te permet à générer un plan de site web. Vous pouver fournir une adresse URL ou copier/coller directement le code HTML. En utilisant l'Outliner, tu peux voir comment les moteurs de recherche (comme Google, Baidu, DuckDuckGo) et des lecteurs d'écran voient ta page. Cette ressource a été ajouté à la section <a href="#ressources">Ressources</a> en haut.</li>
           <li>
             Analyse les sites suivants. Essaie de voir comment le site est structuré sémantiquement. Utilise l'outliner HTML et l'inspecteur aussi. Penses-tu que ces sites utilisent une bonne sémantique HTML? Compare avec un partenaire.
@@ -416,7 +284,7 @@ Les titres et les paragraphes en HTML
           </li>
 
           <li>
-            Lis <a href="https://smnarnold.com/cours/html/legende-de-media">cet article</a> sur <span class="element">figure</span> et <span class="element">figcaption</span></span>.
+            Lis <a href="https://smnarnold.com/cours/html/legende-de-media">cet article</a> sur <span class="element">figure</span> et <span class="element">figcaption</span>.
             <ul>
               <li>Ajoute au moins 3 images à ton site avec des légendes</li>
               <li>Ajoute du CSS pour changer la mise en forme des légendes</li>
@@ -424,7 +292,7 @@ Les titres et les paragraphes en HTML
           </li>
 
           <li>
-            Lis <a href="https://smnarnold.com/cours/html/citation">cet article</a> et <a href="https://developer.mozilla.org/fr/docs/Web/CSS/quotes">cet article</a> sur <span class="element">q</span>, <span class="element">blockquote</span> et <span class="element">cite</span></span>.
+            Lis <a href="https://smnarnold.com/cours/html/citation">cet article</a> et <a href="https://developer.mozilla.org/fr/docs/Web/CSS/quotes">cet article</a> sur <span class="element">q</span>, <span class="element">blockquote</span> et <span class="element">cite</span>.
             <ul>
               <li>Créer deux pages web avec des attributes « lang » différents avec une citation (<span class="element">q</span>) pour démontrer comment cet attribut change le comportement</li>
               <li>Intègre ces deux pages directement dans ton site avec des éléments <span class="element">iframe</span> qui ont une taille appropriée</li>
@@ -445,7 +313,7 @@ Les titres et les paragraphes en HTML
           </li>
 
           <li>
-            Lis <a href="https://smnarnold.com/cours/html/details-and-summary">cet article</a> sur <span class="element">details</span> et <span class="element">summary</span></span>
+            Lis <a href="https://smnarnold.com/cours/html/details-and-summary">cet article</a> sur <span class="element">details</span> et <span class="element">summary</span>
             <ul>
               <li>Cache chaque partie de ton site web, la rendant visible seulement quand on fais un clic là-dessus.</li>
             </ul>
@@ -546,7 +414,7 @@ Les titres et les paragraphes en HTML
         <article class="" id="viewport">
           <h4>Viewport</h4>
           <p>Article SMNArnold sur les <a href="https://smnarnold.com/cours/html/metadonnees#viewport">viewports</a>.</p>
-          <p>Le code suivant inséré dans votre section <span class="element">head</span> servira bien dans la majorité des cas :</p><code>&ltmeta name="viewport" content="width=device-width, initial-scale=1"&gt</code>
+          <p>Le code suivant inséré dans votre section <span class="element">head</span> servira bien dans la majorité des cas :</p><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code>
 
           <hr class="petit">
         </article>
@@ -607,8 +475,133 @@ Les titres et les paragraphes en HTML
 
         </article>
 
-        <hr>
       </section>
+
+
+        <section id='exercices-emmet'>
+          <h3>Exercices Emmet</h3>
+
+          <h4 id='exercices-emmet-1'>Exercice 1</h4>
+          <p class="codepen" data-height="320" data-theme-id="dark" data-default-tab="html,result" data-slug-hash="ZEXZKZP" data-editable="true" data-user="snufflufikist" style="height: 320px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+          <span>See the Pen <a href="https://codepen.io/snufflufikist/pen/ZEXZKZP">
+          Untitled</a> by o (<a href="https://codepen.io/snufflufikist">@snufflufikist</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+          <hr>
+
+        </section>
+
+        <hr>
+        
+        <h2>Ressources</h2>
+
+        <section id="ressources-emmet">
+    
+          <h3>Emmet</h3>
+          <ul>
+            <li><a href="https://docs.emmet.io/abbreviations/syntax/">Syntaxe de base Emmet (anglais)</a></li>
+            <li>En plus que développer des expressions courtes, Emmet a <a href="https://docs.emmet.io/actions/">d'autres fonctions</a> qui pourraient être utiles (anglais)</li>
+            <li>Emmet <a href="https://docs.emmet.io/cheat-sheet/">cheat sheet (anglais)</a></li>
+            <li>Article court de <a href="https://smnarnold.com/cours/html/emmet">SMNArnold</a> qui explique les bases. (français)</li>
+          </ul>
+
+          <p>Pour voir la liste de raccourcis clavier dans Atom, faire <span class="menu">Fichier</span> > <span class="menu">Paramètres</span> et ensuite selectionner <span class="menu">Keybindings</span>.</p>
+  
+          <p><a href="https://docs.emmet.io/abbreviations/syntax/">Un conseil</a> directement des développeurs d'Emmet :</p>
+          <blockquote>You don’t really need to write complex abbreviations... You’ll quickly find out that constructing a single complex abbreviation is much slower and error-prone than constructing and typing a few short ones.</blockquote>
+
+    
+        </section>
+    
+        <!-- <section id='teletype'>
+          <h3>Teletype</h3>
+          <p>Teletype est une extension (package) pour Atom qui permet l'utilisateur de collaborer en temps réel (comme Google Docs).</p>
+          <p>Suis les instructions suivantes pour l'installer</p>
+          <ol class='aere'>
+            <li>Installe le package <span class="italique">teletype</span><a href=""></a>
+              <ol>
+                <li>Dans Atom > <span class="menu">Fichier</span> > <span class="menu">Paramètres</span></li>
+                <li>Fais un clic sur <span class="graisse-normale">+</span>install</li>
+                <li>Dans la boîte de recherche, tape « teletype »</li>
+                <li>Fais un clic sur <span class="styleButton">install</span></li>
+              </ol>
+            </li>
+            <li>Crée un compte <a href="https://github.com/">Github</a> <span class="graisse-normale">jetable</span>.
+              <ul>
+                <li>Fais toutes les étapes du processus avec la <span class="graisse-normale">navigation privée</span>. Il faudra utiliser Safari, <span class="menu">Fichier</span> > <span class="menu">Nouvelle fenêtre privée</span>.</li>
+                <li>N'utilise <span class="graisse-normale">pas</span> un compte courriel personnel ou institutionnel (du CSF).<a href=""></a></li>
+                <li><span class="graisse-normale">Utilise</span> une service de courriel jetable (ex. <a href="https://www.throwaway.io/">Throwaway.io</a>).</li>
+                <li>N'utiliser ce compte <span class="graisse-normale">que</span> pour teletype dans le contexte de ce cours.<a href=""></a></li>
+              </ul>
+            </li>
+            <li>Dans Atom, fais un clic sur le petit icon (en bas et à droite) qui à l'air d'une tour de radio (à gauche de l'icon pour Github).<a href=""></a></li>
+            <li>Copie le lien pour avoir un jeton d'accès OAuth<a href=""></a></li>
+            <li>Colle ce lien dans un nouvel onglet dans ta navigation privée. Tu devrais toujours être connecté.e à ton compte Github jetable.<a href=""></a></li>
+            <li>Partage le URL de ton portal pour collaborer en temps réel.<a href=""></a></li>
+            <li>Si jamais tu perds ton accès, répète ces étapes pour créer un nouveau compte jetable et jeton d'accès OAuth.</li>
+          </ol>
+        </section> -->
+    
+        <section id="erreurs-validateur">
+          <h3>Solutions aux erreurs trouvées par le validateur</h3>
+    
+          <p>Le <a href="https://validator.w3.org">validateur html</a> est incontournable pour trouver certaines erreurs dans le code html, mais il n’est pas toujours évident ce que veut dire les messages d’erreur. Voici une liste d’erreurs communes et leur solution.</p>
+    
+          <ul class='aere'>
+    
+            <li>
+              Stray start tag <span class='element'>footer</span>.
+    
+              <details class='bleu'>
+                <summary>
+                  <span class='graisse-normale'>Solution</span>
+                </summary>
+                  l’élément <span class='element'>footer</span> doit être contenu dans l’élément <span class='element'>body</span>
+              </details>
+            </li>
+    
+            <li>
+              End tag <span class='element'>XXX</span> seen, but there were open elements.<br>
+              Unclosed element <span class='element'>YYY</span>.
+    
+              <details class='bleu'>
+                <summary class='graisse-normale'>Solution</summary> Quand vous voyez ces erreurs, mais que vous pensez avoir bien fermé vos éléments, vérifiez l’ordre de balises. Quand on imbrique les balises, il faut les emboîter. Pensez aux parentheses. <span class="pre">[(   ]     )</span> versus <span class="pre">[(    )    ]</span>.
+              </details>
+            </li>
+            <li>
+              Bad value 325px for attribute <span class='element'>height</span> on element <span class='element'>iframe</span>: Expected a digit but saw p instead.<br>
+              Bad value 300px for attribute <span class='element'>height</span> on element <span class='element'>img</span>: Expected a digit but saw p instead.<br>
+    
+              <details class='bleu'>
+                <summary class='graisse-normale'>Solution</summary> Dans un élément <span class='element'>iframe</span> ou <span class='element'>img</span>, il n’est pas nécessaire de mettre « px » après le chiffre.
+              </details>
+            </li>
+            <li>
+              Bad value 100% for attribute <span class='element'>width</span> on element <span class='element'>iframe</span>: Expected a digit but saw % instead.<br>
+              Bad value 100% for attribute <span class='element'>width</span> on element <span class='element'>img</span>: Expected a digit but saw % instead.<br>
+    
+              <details class='bleu'>
+                <summary class='graisse-normale'>Solution</summary> Les pourcentages ne sont pas permis dans un élément <span class='element'>iframe</span> ou <span class='element'>img</span>. Mettez les pourcentages dans le CSS.
+              </details>
+            </li>
+            <li>
+              The <span class='element'>frameborder</span> attribute on the <span class='element'>iframe</span> element is obsolete. Use CSS instead.
+    
+              <details class='bleu'>
+                <summary class='bleu graisse-normale'>Solution</summary> Exemple du CSS
+    
+                <pre>
+                  iframe {
+                      border-width: 0px;
+                  }
+                </pre>
+              </details>
+            </li>
+          </ul>
+    
+        </section>
 
   </main>
 
