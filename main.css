@@ -194,6 +194,7 @@ header {
 
 hr {
   margin: 3.5em 0px;
+  border-color: var(--bleupale);
 }
 
 hr.petit {
