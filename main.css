@@ -64,7 +64,7 @@ body {
 }
 
 #boutonHaut {
-  /* display: none; /* Hidden by default */ */
+  /* display: none; /* Hidden by default */
   opacity: 0; /* transparent par défaut */
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
