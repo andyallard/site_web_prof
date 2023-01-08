@@ -61,6 +61,7 @@ body {
 ::selection {
   background-color: var(--jaune);
   color: var(--bleufonce);
+  font-weight: bolder;
 }
 
 #boutonHaut {
@@ -315,4 +316,17 @@ nav a:visited {
   padding: 0px 10px;
   border-radius: 2px;
   margin: 2px;
+}
+
+table, th, td {
+  border: 1px var(--blanc) solid;
+  border-collapse: collapse;
+  padding: 5px;  
+  text-align: center;
+}
+
+tr:hover {
+  background-color: var(--bleupale);
+  color: var(--bleufonce);
+  font-weight: bold;
 }

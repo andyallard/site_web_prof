@@ -64,13 +64,22 @@
     <section>
 
       <h2>Leçons</h2>
+      
+      <h4>HTML</h4>
+
       <ol>
         <li><a href="#lecon1">Leçon 1</a></li>
         <li><a href="#lecon2">Leçon 2</a></li>
         <li><a href="#lecon3">Leçon 3</a></li>
         <li><a href="#lecon4">Leçon 4</a></li>
-        <!-- <li><a href="#lecon5">Leçon 5</a></li>
-        <li><a href="#lecon6">Leçon 6</a></li> -->
+        <li><a href="#lecon5">Leçon 5</a></li>
+      </ol>
+
+      <h4>CSS</h4>
+
+      <ol>
+      <li><a href="#lecon6">Leçon 6</a></li>
+        <!-- <li><a href="#lecon6">Leçon 6</a></li> -->
         
         <!-- <li><a href="#depassement">Largeur, hauteur et les problèmes de dépassement</a></li>
         <li><a href="#semantique">Sémantique HTML</a></li>
@@ -121,7 +130,7 @@
       <article>
         <h3 id="lecon1">Leçon 1</h3>
 
-        <p>Lis les articles suivants</p>
+        <p>Lis les articles suivants&nbsp;:</p>
         
         <ol>
           <li><a href="https://www.pierre-giraud.com/html-css-apprendre-coder-cours/element-balise-attribut/">Eléments, balises et attributs HTML</a></li>
@@ -134,12 +143,34 @@
       <article>
         <h3 id="lecon2">Leçon 2</h3>
 
-        <p>Lis les articles suivants sur les concepts de :</p>
+        <p>Lis les articles suivants sur les concepts de&nbsp;:</p>
         
         <ol>
           <li><a href="https://www.pierre-giraud.com/html-css-apprendre-coder-cours/structure-minimale-page/">Structure minimale d’une page HTML valide</a></li>
           <li><a href="https://www.pierre-giraud.com/html-css-apprendre-coder-cours/indentation-commentaire-html/">L’indentation et les commentaires en HTML</a></li>
         </ol>
+
+        <h4>Valider le code HTML ou CSS</h4>
+        
+        <p>
+          Les navigateurs (Firefox, Chrome, Safari, etc) feront de leur mieux pour 
+          rendre une page web HTML, même s'il y a des erreurs dans le code. C'est l'une
+          des grandes différences entre un langage de balisage et un langage de programmation
+        </p>
+        <p>
+          Ainsi, les validateurs <a href="https://validator.w3.org/">HTML</a> et 
+          <a href="https://jigsaw.w3.org/css-validator/">CSS</a> sont incontournables
+          pour s'assurer que le code est valide puisque le navigateur va ignorer ces erreurs.
+        </p>
+
+        <p>Les erreurs soulignées par les validateurs sont généralement assez
+          descriptives, mais certaines pourraient être difficile à comprendre. Alors,
+          il y a une section
+          <a href="#erreurs-validateur">solutions aux erreurs trouvées par le validateur</a>
+          dans les <a href="#ressources">ressources</a> pour vous vous aider.
+        </p>
+
+        <h4>La structure minimale pour une page web valide</h4>
 
         <p>
           Pour qu'une page soit valide, il faut inclure certaines
@@ -172,15 +203,15 @@
       <article>
         <h3 id="lecon3">Leçon 3</h3>
 
-        <p>Nous allons apprendre les concepts suivantes :</p>
+        <p>Nous allons apprendre les concepts suivants&nbsp;:</p>
 
         <ol>
           <li>les listes (comme celle-ci)</li>
           <li>les balises <span class="element">br</span>, <span class="element">hr</span> et <span class="element">pre</span></li>
           <li>Les entités HTML </li>
           <ul>
-            <li><code>&amp;nbsp;</code> - espace « insécable », très utile en français pour les guillemets, les signes de&nbsp$, etc</li>
-            <li><code>&amp;thinsp;</code> - demi-espace, utile en français pour après les&nbsp? et&nbsp!</li>
+            <li><code>&amp;nbsp;</code> - espace insécable, très utile en français pour les guillemets et les unités, 10&nbsp;km/h, 73,25&nbsp;$ etc</li>
+            <li><code>&amp;thinsp;</code> - demi-espace, utile en français pour après les&nbsp;? et&nbsp;!</li>
           </ul>
         </ol>
         
@@ -197,18 +228,205 @@
       <article>
         <h3 id="lecon4">Leçon 4</h3>
 
-        <p>Nous allons apprendre les concepts suivantes :</p>
+        <p>Nous allons approfondir notre compréhension des hyperliens&nbsp;:</p>
 
         <ol>
           <li>la balises <span class="element">a</span> qui permet de créer des hyperliens externes et internes.</li>
-          <li>les balises <span class="element">strong</span> et <span class="element">em</span></li>
+          <li>les hyperliens externes</li>
+          <li>les hyperliens internes (de la page)</li>
+          <ul>
+            <li>les « <span class="graisse-normale">id</span> » et la référence « # »</li>
+            <li>contrôler le défilement</li>
+          </ul>
+          <li>les hyperliens internes (du site)</li>
+          <ul>
+            <li>les pages dans le même dossier</li>
+            <li>les pages qui se trouvent dans un autre dossier (avec « .. » et « / »)</li>
+          </ul>
+          <li>Comment structurer un site web</li>
+          <ul>
+            <li>index.html - page principale (ou d'acceuil)</li>
+            <li>toutes les images dans un dossier ( « media »)</li>
+            <li>tous tes fichiers css dans un dossier (généralement nommé « css »)</li>
+            <li>bien organisé et structuré comme un dossier sur l'ordinateur</li>
+            <li>bonne convention d'appellation</li>
+          </ul>
         </ol>
         
         <p>Lis les articles suivants.</p>
         
         <ol>
           <li><a href="https://smnarnold.com/cours/html/ancre">HTML - Ancre</a></li>
+          <li>(facultatif) - Une explication très complète de commennt <a href="https://www.pierre-giraud.com/html-css-apprendre-coder-cours/lien-interne-externe-ancre/">Créer des lien en HTML</a></li>
+        </ol>
+
+        <hr>
+      </article>
+
+      <article>
+        <h3 id="lecon5">Leçon 5</h3>
+
+        <p>Nous allons apprendre les concepts suivants&nbsp;:</p>
+
+        <ol>
+          <li>les balises <span class="element">strong</span> et <span class="element">em</span></li>
+          <li>les entités HTML</li>
+        </ol>
+        
+        <p>Lis les articles suivants.</p>
+        
+        <ol>
           <li><a href="https://www.pierre-giraud.com/html-css-apprendre-coder-cours/strong-em-mark/">Définir le niveau d’importance des contenus en HTML</a></li>
+          <li>lis seulement la section <a href="https://www.pierre-giraud.com/html-css-apprendre-coder-cours/compatibilite-support-validation-code/">Les entités HTML</a> (vers le bas)</li>
+        </ol>
+        
+        <h4>La convention d'appellation</h4>
+
+        <p>Pour éviter des bogues et du comportement non voulu, il est important
+          de respecter les règles suivantes lorsqu'on nomme les fichiers.
+        </p>
+
+        <ol>
+          <li>utiliser des noms descriptifs</li>
+          <li>pas d'espaces</li>
+          <li>pas de caractères spéciaux ($, *, @, #, etc)</li>
+          <li>pas de lettres accentées (É, ô, à, etc.)</li>
+          <li>le premier caractère devrait être un lettre</li>
+          <li>toutes les lettres en minuscule</li>
+          <li>faire attention aux extensions</li>
+          <ul>
+            <li>Chaque fichier doit avoir une extension valide (.html, .css, 
+              .jpg, .png, etc)j</li>
+            <li>Le nom de fichier doit ne contenir qu'un seul point « . ». Alors, 
+              pas de nom_photo.png.jpg
+            </li>
+            <li>Fais attention aux espaces invisibles dans l'extension (Ex. 
+              index.html_ où le soulignement représente un espace.)</li>
+          </ul>
+        </ol>
+
+        <h4>Entités HTML</h4>
+
+        <details>
+        <summary class='bleu graisse-normale'>Voici une liste d'entités HTML communes</summary>
+
+        <div>
+          <table>
+          <tbody>
+            <tr>
+              <td><strong>Symbole</strong></td>
+              <td><strong>Description (fran&ccedil;ais)</strong></td>
+              <td><strong>Description (anglais)</strong></td>
+              <td><strong>Nom d&rsquo;entit&eacute;</strong></td>
+              <td><strong>Nombre d&rsquo;entit&eacute;</strong></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>espace ins&eacute;cable</td>
+              <td>non-breaking space</td>
+              <td>&amp;nbsp;</td>
+              <td>&amp;#160;</td>
+            </tr>
+            <tr>
+              <td>&lt;</td>
+              <td>signe inf&eacute;rieur &agrave;</td>
+              <td>less than</td>
+              <td>&amp;lt;</td>
+              <td>&amp;#60;</td>
+            </tr>
+            <tr>
+              <td>&gt;</td>
+              <td>signe sup&eacute;rieur &agrave;</td>
+              <td>greater than</td>
+              <td>&amp;gt;</td>
+              <td>&amp;#62;</td>
+            </tr>
+            <tr>
+              <td>&amp;</td>
+              <td>perlu&egrave;te</td>
+              <td>ampersand</td>
+              <td>&amp;amp;</td>
+              <td>&amp;#38;</td>
+            </tr>
+            <tr>
+              <td>"</td>
+              <td>guillemet anglais double</td>
+              <td>double quotation mark</td>
+              <td>&amp;quot;</td>
+              <td>&amp;#34;</td>
+            </tr>
+            <tr>
+              <td>'</td>
+              <td>apostrophe</td>
+              <td>single quotation mark (apostrophe)</td>
+              <td>&amp;apos;</td>
+              <td>&amp;#39;</td>
+            </tr>
+            <tr>
+              <td>&cent;</td>
+              <td>cenne</td>
+              <td>cent</td>
+              <td>&amp;cent;</td>
+              <td>&amp;#162;</td>
+            </tr>
+            <tr>
+              <td>&pound;</td>
+              <td>livre (britannique)</td>
+              <td>pound</td>
+              <td>&amp;pound;</td>
+              <td>&amp;#163;</td>
+            </tr>
+            <tr>
+              <td>&yen;</td>
+              <td>yen</td>
+              <td>yen</td>
+              <td>&amp;yen;</td>
+              <td>&amp;#165;</td>
+            </tr>
+            <tr>
+              <td>&euro;</td>
+              <td>euro</td>
+              <td>euro</td>
+              <td>&amp;euro;</td>
+              <td>&amp;#8364;</td>
+            </tr>
+            <tr>
+              <td>&copy;</td>
+              <td>droit d&rsquo;auteur</td>
+              <td>copyright</td>
+              <td>&amp;copy;</td>
+              <td>&amp;#169;</td>
+            </tr>
+            <tr>
+              <td>&reg;</td>
+              <td>symbole de marque d&eacute;pos&eacute;e</td>
+              <td>registered trademark</td>
+              <td>&amp;reg;</td>
+              <td>&amp;#174;</td>
+            </tr>
+          </tbody>
+          </table>
+          </div>
+        </details>
+
+        <hr>
+      </article>
+
+      <article>
+        <h3 id="lecon6">Leçon 6</h3>
+
+        <p>Cette leçon introduit le CSS. Nous allons apprendre les concepts suivants&nbsp;:</p>
+
+        <ol>
+          <li>Les sélecteurs et les propriétés CSS</li>
+          <li>Les trois endroits où l'on peut écrire le code CSS</li>
+        </ol>
+        
+        <p>Lis les articles suivants.</p>
+        
+        <ol>
+          <li><a href="https://www.pierre-giraud.com/html-css-apprendre-coder-cours/selecteur-propriete/">Sélecteurs et propriétés CSS</a></li>
+          <li><a href="https://www.pierre-giraud.com/html-css-apprendre-coder-cours/ou-ecrire-code-css/">Où écrire le code CSS ?</a></li>
         </ol>
         
         <hr>
