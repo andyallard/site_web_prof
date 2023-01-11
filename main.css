@@ -319,6 +319,11 @@ nav a:visited {
   margin: 2px;
 }
 
+svg {
+  display: block;
+  margin: auto;
+}
+
 table, th, td {
   border: 1px var(--blanc) solid;
   border-collapse: collapse;
