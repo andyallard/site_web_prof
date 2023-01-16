@@ -149,6 +149,15 @@ figcaption {
   width: 100%;
 }
 
+img {
+  margin: auto;
+  display: block;
+}
+
+.toute-largeur img {
+  width: 100%;
+}
+
 img.toute-largeur {
   width: 100%;
 }
@@ -335,4 +344,8 @@ tr:hover {
   background-color: var(--bleupale);
   color: var(--bleufonce);
   font-weight: bold;
+}
+
+video {
+  width: 100%;
 }
