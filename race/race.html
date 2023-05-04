@@ -13,7 +13,7 @@
     <link rel='stylesheet' href='main.css'>
 
 
-    
+
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -28,11 +28,9 @@
       // instantiates the pie chart, passes in the data and
       // draws it.
 
-      const values = [0, 20, 0, 3, 100];
-
-
       const names = ['Jules', 'Storm', 'Oli', 'SourD', 'Goal'];
-      const colours = ['#00aacc', 'purple', 'orange', 'color: blue', 'color: grey']
+      const values = [0, 22, -3, 3, 100];
+      const colours = ['#00aacc', '#', 'orange', 'color: purple', 'color: grey']
       const goal = [30, 52, 26, 20, 100];
       // let progress = values/goal;
       var progress = values.map(function(n, i) { return n / goal[i]; });
