@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+
+      const values = [0, 20, 0, 3, 100];
+
+
+      const names = ['Jules', 'Storm', 'Oli', 'SourD', 'Goal'];
+      const colours = ['#00aacc', 'purple', 'orange', 'color: blue', 'color: grey']
+      const goal = [30, 52, 26, 20, 100];
+      // let progress = values/goal;
+      var progress = values.map(function(n, i) { return n / goal[i]; });
+
+      
+      function drawChart() {
+
+        let base = [
+         ['Racer', '..', { role: 'style' }, { role: 'annotation' } ]];
+
+        for (i = 0; i < 5; i++) {
+          base.push([names[i], progress[i], colours[i], values[i] + ' lb = ' + Math.round(progress[i] * 100, 2) + '%']);
+        }
+        base[5][3] = '100%';
+        
+
+
+        // Create the data table.
+        var data = google.visualization.arrayToDataTable(base);
+
+        // Set chart options
+        // var options = {'title':'Race to the finish...',
+        //                'width':400,
+        //                'height':400};
+
+        var options = {
+        title: "Race to 100% of the goal!",
+        width: 600,
+        height: 400,
+        bar: {groupWidth: '95%'},
+        legend: { position: 'none' },
+      };
+
+        
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Div that will hold the bar chart-->
+    <div id="chart_div"></div>
+  </body>
+</html>
